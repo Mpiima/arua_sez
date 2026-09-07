@@ -1,51 +1,91 @@
 <template>
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all">
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <!-- Brand Logo & Title -->
-        <RouterLink to="/" class="flex items-center gap-3.5 group">
-          <div class="w-11 h-11 rounded-xl bg-brand-navy flex items-center justify-center shadow-md shadow-brand-navy/20 group-hover:scale-105 transition-transform">
-            <svg class="w-7 h-7 text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        <!-- Brand Logo -->
+        <RouterLink to="/" class="flex items-center gap-3 group">
+          <!-- Logo Emblem -->
+          <div class="relative w-11 h-11 flex-shrink-0 flex items-center justify-center">
+            <svg class="w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer gear in green -->
+              <path d="M24 6V2M24 46V42M6 24H2M46 24H42M11.3 11.3L8.5 8.5M39.5 39.5L36.7 36.7M11.3 36.7L8.5 39.5M39.5 11.3L36.7 14.1" stroke="#166534" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="16" stroke="#166534" stroke-width="2.5" fill="#FFFFFF"/>
+              <!-- Factory / leaves in gold & green -->
+              <path d="M16 32V24L22 28V22L28 26V18H32V32H16Z" fill="#D97706"/>
+              <path d="M22 32C22 26 27 23 30 22C29 27 26 31 22 32Z" fill="#166534"/>
             </svg>
           </div>
-          <div>
-            <div class="font-heading font-extrabold text-xl tracking-tight text-brand-navy flex items-center gap-1.5">
-              <span>ARUA</span>
-              <span class="text-brand-gold">SEZ</span>
+
+          <!-- Logo Text -->
+          <div class="leading-none">
+            <div class="flex items-baseline gap-1 font-heading font-extrabold text-xl tracking-tight">
+              <span class="text-[#0E5832]">ARUA</span>
+              <span class="text-[#D97706]">SEZ</span>
             </div>
-            <p class="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Special Economic Zone</p>
+            <div class="text-[9px] font-bold text-gray-500 tracking-[0.2em] uppercase mt-0.5">
+              Special Economic Zone
+            </div>
           </div>
         </RouterLink>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-          <RouterLink to="/" class="text-brand-navy font-semibold hover:text-brand-gold transition-colors">
-            Home
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-7">
+          <RouterLink 
+            to="/" 
+            class="relative py-2 text-[13px] font-bold tracking-wider text-[#0E5832] transition-colors"
+          >
+            HOME
+            <span class="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#0E5832] rounded-full"></span>
           </RouterLink>
-          <a href="#about" class="hover:text-brand-navy transition-colors">About Zone</a>
-          <a href="#sectors" class="hover:text-brand-navy transition-colors">Priority Sectors</a>
-          <a href="#incentives" class="hover:text-brand-navy transition-colors">Incentives</a>
-          <a href="#contact" class="hover:text-brand-navy transition-colors">Contact</a>
+
+          <a href="#about" class="text-[13px] font-semibold tracking-wider text-gray-700 hover:text-[#0E5832] transition-colors">
+            ABOUT
+          </a>
+
+          <a href="#invest" class="text-[13px] font-semibold tracking-wider text-gray-700 hover:text-[#0E5832] transition-colors">
+            INVEST
+          </a>
+
+          <a href="#the-zone" class="text-[13px] font-semibold tracking-wider text-gray-700 hover:text-[#0E5832] transition-colors">
+            THE ZONE
+          </a>
+
+          <a href="#industries" class="text-[13px] font-semibold tracking-wider text-gray-700 hover:text-[#0E5832] transition-colors">
+            INDUSTRIES
+          </a>
+
+          <a href="#trade" class="text-[13px] font-semibold tracking-wider text-gray-700 hover:text-[#0E5832] transition-colors">
+            EXPORT &amp; TRADE
+          </a>
+
+          <a href="#resources" class="text-[13px] font-semibold tracking-wider text-gray-700 hover:text-[#0E5832] transition-colors">
+            RESOURCES
+          </a>
+
+          <a href="#news" class="text-[13px] font-semibold tracking-wider text-gray-700 hover:text-[#0E5832] transition-colors">
+            NEWS
+          </a>
+
+          <a href="#contact" class="text-[13px] font-semibold tracking-wider text-gray-700 hover:text-[#0E5832] transition-colors">
+            CONTACT
+          </a>
         </nav>
 
-        <!-- Action / Admin Link -->
+        <!-- Right Side: INVEST NOW Button -->
         <div class="hidden sm:flex items-center gap-3">
           <RouterLink 
             to="/admin" 
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold bg-brand-navy text-white hover:bg-slate-800 shadow-sm hover:shadow transition-all"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold tracking-wider uppercase text-white bg-[#0F3924] hover:bg-[#092919] shadow-sm hover:shadow transition-all"
           >
-            <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-            Admin Dashboard
+            <span>INVEST NOW</span>
+            <span class="text-sm">→</span>
           </RouterLink>
         </div>
 
-        <!-- Mobile Menu Button -->
+        <!-- Mobile Menu Toggle Button -->
         <button 
           @click="mobileMenuOpen = !mobileMenuOpen"
-          class="md:hidden p-2 rounded-lg text-slate-600 hover:text-brand-navy hover:bg-slate-100 transition-colors"
+          class="xl:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
           aria-label="Toggle navigation"
         >
           <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,20 +98,24 @@
       </div>
     </div>
 
-    <!-- Mobile Dropdown -->
-    <div v-if="mobileMenuOpen" class="md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
-      <RouterLink to="/" @click="mobileMenuOpen = false" class="block py-2 text-base font-semibold text-brand-navy">Home</RouterLink>
-      <a href="#about" @click="mobileMenuOpen = false" class="block py-2 text-base text-slate-600">About Zone</a>
-      <a href="#sectors" @click="mobileMenuOpen = false" class="block py-2 text-base text-slate-600">Priority Sectors</a>
-      <a href="#incentives" @click="mobileMenuOpen = false" class="block py-2 text-base text-slate-600">Incentives</a>
-      <a href="#contact" @click="mobileMenuOpen = false" class="block py-2 text-base text-slate-600">Contact</a>
+    <!-- Mobile Menu Drawer -->
+    <div v-if="mobileMenuOpen" class="xl:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-lg">
+      <RouterLink to="/" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-bold text-[#0E5832]">HOME</RouterLink>
+      <a href="#about" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-semibold text-gray-700">ABOUT</a>
+      <a href="#invest" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-semibold text-gray-700">INVEST</a>
+      <a href="#the-zone" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-semibold text-gray-700">THE ZONE</a>
+      <a href="#industries" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-semibold text-gray-700">INDUSTRIES</a>
+      <a href="#trade" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-semibold text-gray-700">EXPORT &amp; TRADE</a>
+      <a href="#resources" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-semibold text-gray-700">RESOURCES</a>
+      <a href="#news" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-semibold text-gray-700">NEWS</a>
+      <a href="#contact" @click="mobileMenuOpen = false" class="block py-1.5 text-sm font-semibold text-gray-700">CONTACT</a>
       <div class="pt-2">
         <RouterLink 
           to="/admin" 
           @click="mobileMenuOpen = false"
-          class="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-lg text-sm font-semibold bg-brand-navy text-white"
+          class="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-lg text-xs font-bold tracking-wider uppercase text-white bg-[#0F3924]"
         >
-          Admin Dashboard
+          INVEST NOW →
         </RouterLink>
       </div>
     </div>
