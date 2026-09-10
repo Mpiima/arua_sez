@@ -5,15 +5,15 @@
 <svg viewBox="100 0 850 950" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="ugandaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0E5832" />
-      <stop offset="50%" stop-color="#0B4728" />
-      <stop offset="100%" stop-color="#06321C" />
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="50%" stop-color="#141E2E" />
+      <stop offset="100%" stop-color="#0B0F19" />
     </linearGradient>
     <filter id="mapShadow" x="-10%" y="-10%" width="130%" height="130%">
       <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.18" />
     </filter>
   </defs>
-  <g transform="translate(0, 1024) scale(0.1, -0.1)" fill="url(#ugandaGrad)" filter="url(#mapShadow)" stroke="#136B3D" stroke-width="12">
+  <g transform="translate(0, 1024) scale(0.1, -0.1)" fill="url(#ugandaGrad)" filter="url(#mapShadow)" stroke="#334155" stroke-width="12">
 <path d="M7790 9825 l-435 -414 -305 6 -305 6 -147 114 c-80 62 -151 113 -157
 113 -5 0 -56 -33 -113 -74 -101 -72 -106 -75 -263 -119 l-160 -45 -294 -7
 -294 -7 -187 -116 -187 -117 -7 -84 c-3 -47 -7 -86 -9 -87 -1 -1 -39 2 -85 8

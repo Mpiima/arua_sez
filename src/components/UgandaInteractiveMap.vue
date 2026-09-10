@@ -1,36 +1,96 @@
 <template>
-  <div class="relative w-full max-w-xl mx-auto py-8">
-    <!-- SVG Map Container with ample margin for floating cards -->
-    <div class="relative w-full aspect-[1/0.95] flex items-center justify-center">
-      <svg 
-        viewBox="-40 -20 1100 1060" 
-        class="w-full h-full drop-shadow-2xl overflow-visible" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <!-- Rich authentic forest green gradient matching reference image -->
-          <linearGradient id="ugandaFill" x1="20%" y1="0%" x2="80%" y2="100%">
-            <stop offset="0%" stop-color="#0E5832" />
-            <stop offset="45%" stop-color="#0B4728" />
-            <stop offset="100%" stop-color="#06351E" />
-          </linearGradient>
+  <!-- Hub diagram: South Sudan (Top), DRC (Left), Regional (Right), Uganda Map (Center) -->
+  <div class="relative w-full max-w-5xl mx-auto py-6 select-none" ref="containerRef">
 
-          <!-- Topographic relief shadow filter -->
-          <filter id="ugandaRelief" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.28" />
-          </filter>
-        </defs>
+    <!-- SVG overlay: straight lines from red indicator to card edges (on top of map) -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none z-30 overflow-visible"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr-red"    markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L0,9 L9,4.5 z" fill="#D00004"/></marker>
+        <marker id="arr-orange" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L0,9 L9,4.5 z" fill="#D17F00"/></marker>
+        <marker id="arr-amber"  markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L0,9 L9,4.5 z" fill="#F59E0B"/></marker>
+      </defs>
+      <line v-for="(ln, i) in lines" :key="i"
+        :x1="ln.x1" :y1="ln.y1" :x2="ln.x2" :y2="ln.y2"
+        :stroke="ln.color" stroke-width="2.5" stroke-dasharray="7 5"
+        :marker-end="`url(#${ln.marker})`" opacity="0.95"/>
+    </svg>
 
-        <!-- Uganda Map Outline Paths (Authentic Geographic Boundary) -->
-        <g 
-          transform="translate(0, 1024) scale(0.1, -0.1)" 
-          fill="url(#ugandaFill)" 
-          filter="url(#ugandaRelief)" 
-          stroke="#15673C" 
-          stroke-width="14"
-          stroke-linejoin="round"
-        >
-          <path d="M7790 9825 l-435 -414 -305 6 -305 6 -147 114 c-80 62 -151 113 -157
+    <!-- TOP: South Sudan -->
+    <div class="z-40 flex justify-center mb-6">
+      <div ref="ssRef"
+        class="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 w-[210px] flex items-start gap-3 hover:shadow-2xl transition-all hover:-translate-y-0.5">
+        <div class="w-9 h-6 rounded-md overflow-hidden shadow-sm flex-shrink-0 border border-gray-200 mt-0.5">
+          <svg viewBox="0 0 600 300" class="w-full h-full">
+            <rect width="600" height="90"  fill="#000000"/>
+            <rect y="90"  width="600" height="15" fill="#FFFFFF"/>
+            <rect y="105" width="600" height="90" fill="#DA121A"/>
+            <rect y="195" width="600" height="15" fill="#FFFFFF"/>
+            <rect y="210" width="600" height="90" fill="#078930"/>
+            <polygon points="0,0 260,150 0,300" fill="#0F47AF"/>
+            <polygon points="85,115 105,175 55,140 115,140 65,175" fill="#FCD116"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-black text-xs uppercase tracking-wider text-slate-800">SOUTH SUDAN</div>
+          <div class="text-[11px] text-slate-500 leading-snug mt-1">Direct border market with high demand for manufactured, agro &amp; consumer goods.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Three-column flex -->
+    <div class="flex items-center justify-between gap-6 px-2">
+
+      <!-- LEFT: DRC -->
+      <div class="z-40 flex-1 flex justify-start">
+        <div ref="drcRef"
+          class="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 w-[210px] flex items-start gap-3 hover:shadow-2xl transition-all hover:-translate-y-0.5">
+          <div class="w-9 h-6 rounded-md overflow-hidden shadow-sm flex-shrink-0 border border-gray-200 mt-0.5">
+            <svg viewBox="0 0 800 600" class="w-full h-full">
+              <rect width="800" height="600" fill="#007FFF"/>
+              <polygon points="0,600 0,480 640,0 800,0 800,120 160,600" fill="#FCD116"/>
+              <polygon points="0,600 0,530 710,0 800,0 800,70 90,600" fill="#CE1021"/>
+              <polygon points="120,60 145,135 85,90 155,90 95,135" fill="#FCD116"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-black text-xs uppercase tracking-wider text-slate-800">DRC</div>
+            <div class="text-[11px] text-slate-500 leading-snug mt-1">Eastern Congo trade corridor — mineral processing, agro goods &amp; cross-border commerce.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER: Uganda Map -->
+      <div class="z-10 flex-shrink-0 flex flex-col items-center">
+        <!-- Map container: w-72/w-80, relative so HTML badge can overlay -->
+        <div class="w-72 h-72 sm:w-80 sm:h-80 relative">
+
+          <!-- Uganda SVG map with BIG Arua pin -->
+          <svg viewBox="-40 -20 1100 1060"
+            class="w-full h-full overflow-visible drop-shadow-2xl"
+            xmlns="http://www.w3.org/2000/svg"
+            ref="mapSvgRef">
+            <defs>
+              <linearGradient id="ugFill" x1="20%" y1="0%" x2="80%" y2="100%">
+                <stop offset="0%"   stop-color="#1E293B"/>
+                <stop offset="45%"  stop-color="#141E2E"/>
+                <stop offset="100%" stop-color="#0B0F19"/>
+              </linearGradient>
+              <filter id="ugRelief" x="-10%" y="-10%" width="120%" height="120%">
+                <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.3"/>
+              </filter>
+              <!-- Pin red glow filter -->
+              <filter id="pinGlow" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Uganda outline paths -->
+            <g transform="translate(0, 1024) scale(0.1, -0.1)"
+               fill="url(#ugFill)" filter="url(#ugRelief)"
+               stroke="#334155" stroke-width="14" stroke-linejoin="round">
+              <path d="M7790 9825 l-435 -414 -305 6 -305 6 -147 114 c-80 62 -151 113 -157
 113 -5 0 -56 -33 -113 -74 -101 -72 -106 -75 -263 -119 l-160 -45 -294 -7
 -294 -7 -187 -116 -187 -117 -7 -84 c-3 -47 -7 -86 -9 -87 -1 -1 -39 2 -85 8
 l-82 11 -31 53 -30 53 -93 -6 c-110 -7 -108 -8 -127 106 -9 54 -18 77 -34 90
@@ -135,157 +195,147 @@ c-5 16 -15 51 -21 79 -6 27 -11 51 -12 52 -1 2 -37 -4 -80 -12 -102 -20 -104
 57 22 0 2 -6 20 -14 39 -13 30 -19 34 -58 37 -24 2 -67 -5 -97 -14 l-53 -18 7
 80 c7 79 7 80 -25 120 l-33 41 22 23 c11 12 24 42 27 67 6 42 5 45 -36 78 -34
 27 -41 38 -36 57 3 13 9 34 12 47 4 20 -4 31 -50 66 -31 23 -62 43 -68 46 -7
-2 -209 -182 -448 -410z" />
-          <path d="M6850 3163 c-15 -4 -85 -92 -78 -98 1 -2 26 -14 53 -27 40 -18 51
+2 -209 -182 -448 -410z"/>
+              <path d="M6850 3163 c-15 -4 -85 -92 -78 -98 1 -2 26 -14 53 -27 40 -18 51
 -29 53 -51 3 -24 0 -27 -25 -27 -46 0 -60 -16 -25 -28 16 -5 46 -31 67 -56 33
 -39 40 -43 50 -30 9 14 13 10 23 -23 11 -36 14 -39 42 -35 35 5 35 4 14 43 -9
 19 -13 41 -9 60 6 25 4 29 -14 29 -29 0 -28 40 3 69 16 16 30 20 48 16 30 -8
 57 20 64 67 5 29 2 37 -20 51 -25 17 -26 17 -40 -12 -22 -41 -41 -44 -77 -12
--27 25 -29 32 -20 50 11 20 10 21 -41 20 -29 -1 -60 -3 -68 -6z" />
-          <path d="M7437 2877 l-29 -12 26 -28 c32 -34 71 -38 62 -4 -3 12 -6 30 -6 40
-0 20 -14 21 -53 4z" />
-          <path d="M7822 2812 c-9 -6 -11 -18 -6 -35 6 -26 8 -27 85 -27 69 0 80 2 93
-22 15 21 15 23 -5 30 -34 13 -153 20 -167 10z" />
-          <path d="M6012 2668 c-25 -9 -34 -19 -42 -48 -11 -42 -54 -105 -114 -169 l-41
+-27 25 -29 32 -20 50 11 20 10 21 -41 20 -29 -1 -60 -3 -68 -6z"/>
+              <path d="M7437 2877 l-29 -12 26 -28 c32 -34 71 -38 62 -4 -3 12 -6 30 -6 40 0 20 -14 21 -53 4z"/>
+              <path d="M7822 2812 c-9 -6 -11 -18 -6 -35 6 -26 8 -27 85 -27 69 0 80 2 93 22 15 21 15 23 -5 30 -34 13 -153 20 -167 10z"/>
+              <path d="M6012 2668 c-25 -9 -34 -19 -42 -48 -11 -42 -54 -105 -114 -169 l-41
 -43 48 7 c37 5 54 3 74 -11 25 -16 28 -16 69 6 23 13 49 36 58 52 19 31 16 32
--32 19 -28 -9 -32 -7 -32 10 0 21 27 65 69 111 23 26 23 28 7 53 -18 28 -17
-27 -64 13z" />
-          <path d="M4707 2192 c-23 -25 -22 -28 22 -52 21 -12 45 -36 52 -53 12 -25 26
+-32 19 -28 -9 -32 -7 -32 10 0 21 27 65 69 111 23 26 23 28 7 53 -18 28 -17 27 -64 13z"/>
+              <path d="M4707 2192 c-23 -25 -22 -28 22 -52 21 -12 45 -36 52 -53 12 -25 26
 -35 83 -54 39 -13 80 -23 93 -23 28 0 53 -44 53 -95 0 -29 -3 -35 -22 -35 -22
 0 -108 -81 -143 -133 -16 -25 -16 -28 5 -62 l22 -35 44 45 c24 25 44 55 44 66
 0 19 4 20 38 14 20 -4 40 -13 44 -20 4 -7 18 -10 32 -8 17 4 26 14 30 35 10
 50 7 93 -9 131 -8 20 -15 41 -15 46 0 5 22 22 50 38 49 28 49 29 34 52 -14 20
 -22 22 -58 16 -63 -11 -195 -10 -207 2 -6 6 -13 28 -16 50 -5 36 -2 41 27 60
-l31 20 -68 6 c-114 11 -148 9 -166 -11z" />
-        </g>
+l31 20 -68 6 c-114 11 -148 9 -166 -11z"/>
+            </g>
 
-        <!-- Centered "UGANDA" Country Label -->
-        <text 
-          x="530" 
-          y="560" 
-          fill="#FFFFFF" 
-          opacity="0.9" 
-          font-family="'Outfit', 'Inter', sans-serif" 
-          font-weight="900" 
-          font-size="44" 
-          letter-spacing="8" 
-          text-anchor="middle"
-          class="select-none pointer-events-none drop-shadow"
-        >
-          UGANDA
-        </text>
-
-        <!-- Dashed Connection Lines radiating ON TOP of Uganda map -->
-        <!-- Line 1: to South Sudan (Top-Right) -->
-        <path 
-          d="M 255 185 Q 490 80 730 110" 
-          fill="none" 
-          stroke="#D97706" 
-          stroke-width="3" 
-          stroke-dasharray="6 6" 
-          opacity="0.9"
-        />
-
-        <!-- Line 2: to DRC (Bottom-Left) -->
-        <path 
-          d="M 255 185 Q 90 320 160 670" 
-          fill="none" 
-          stroke="#D97706" 
-          stroke-width="3" 
-          stroke-dasharray="6 6" 
-          opacity="0.9"
-        />
-
-        <!-- Line 3: to Regional Markets (Bottom-Right) -->
-        <path 
-          d="M 255 185 Q 520 440 730 710" 
-          fill="none" 
-          stroke="#D97706" 
-          stroke-width="3" 
-          stroke-dasharray="6 6" 
-          opacity="0.9"
-        />
-
-        <!-- ARUA SEZ Badge Pill (Left of Pin) -->
-        <g transform="translate(125, 148)" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.35))">
-          <rect x="0" y="0" width="118" height="34" rx="8" fill="#0A361F" stroke="#D97706" stroke-width="1.5" />
-          <circle cx="15" cy="17" r="4.5" fill="#D97706" />
-          <text x="28" y="22" fill="#FFFFFF" font-family="'Outfit', 'Inter', sans-serif" font-weight="900" font-size="13" letter-spacing="1.5">ARUA SEZ</text>
-        </g>
-
-        <!-- ARUA SEZ Location Pin (Teardrop Marker at x=255, y=185) -->
-        <g transform="translate(255, 185)" class="cursor-pointer">
-          <!-- Ping pulse -->
-          <circle cx="0" cy="-20" r="14" fill="#F59E0B" opacity="0.3" class="animate-ping" />
-          
-          <!-- Pin body (teardrop) -->
-          <path 
-            d="M 0 0 C -11 -10, -13 -25, 0 -34 C 13 -25, 11 -10, 0 0 Z" 
-            fill="#D97706" 
-            stroke="#FFFFFF" 
-            stroke-width="2.5"
-            filter="drop-shadow(0 4px 6px rgba(0,0,0,0.35))"
-          />
-          <!-- Inner white dot -->
-          <circle cx="0" cy="-20" r="4.5" fill="#FFFFFF" />
-        </g>
-      </svg>
-
-      <!-- Floating Card 1: South Sudan (Top-Right) -->
-      <div class="absolute top-2 right-0 sm:right-2 z-30 bg-white rounded-xl shadow-xl border border-gray-100/90 p-4 max-w-[210px] sm:max-w-[230px] flex items-start gap-3 hover:shadow-2xl transition-shadow">
-        <div class="w-8 h-5 rounded overflow-hidden shadow-sm flex-shrink-0 border border-gray-200 mt-0.5">
-          <svg viewBox="0 0 600 300" class="w-full h-full">
-            <rect width="600" height="90" fill="#000000"/>
-            <rect y="90" width="600" height="15" fill="#FFFFFF"/>
-            <rect y="105" width="600" height="90" fill="#DA121A"/>
-            <rect y="195" width="600" height="15" fill="#FFFFFF"/>
-            <rect y="210" width="600" height="90" fill="#078930"/>
-            <polygon points="0,0 260,150 0,300" fill="#0F47AF"/>
-            <polygon points="85,115 105,175 55,140 115,140 65,175" fill="#FCD116"/>
+            <!-- UGANDA label -->
+            <text x="530" y="640"
+              fill="#FFFFFF" opacity="0.55"
+              font-family="'Outfit','Inter',sans-serif"
+              font-weight="900" font-size="44" letter-spacing="6"
+              text-anchor="middle"
+              class="pointer-events-none">UGANDA</text>
           </svg>
-        </div>
-        <div>
-          <div class="font-heading font-black text-xs uppercase tracking-wider text-slate-900">SOUTH SUDAN</div>
-          <div class="text-[11px] text-slate-500 leading-snug mt-1">
-            A strategic neighbouring market with strong trade and investment potential.
+
+          <!-- ══ HTML ARUA SEZ BADGE OVERLAY ══ -->
+          <!-- Positioned at Arua in NW Uganda, without pin or border -->
+          <div class="absolute z-30 pointer-events-none" style="left: 23%; top: 18%;">
+            <!-- ARUA SEZ label without border -->
+            <div class="flex items-center gap-2 bg-[#0B0F19]/90 rounded-lg px-2.5 py-1">
+              <!-- Live pulsing dot (red indicator) -->
+              <span ref="indicatorRef" class="relative flex h-3 w-3 flex-shrink-0">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-80"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#D00004]"></span>
+              </span>
+              <!-- Label -->
+              <span class="text-white font-black text-xs sm:text-sm tracking-wider uppercase whitespace-nowrap">ARUA SEZ</span>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Floating Card 2: DRC (Bottom-Left) -->
-      <div class="absolute bottom-8 -left-6 sm:-left-4 z-30 bg-white rounded-xl shadow-xl border border-gray-100/90 p-4 max-w-[210px] sm:max-w-[230px] flex items-start gap-3 hover:shadow-2xl transition-shadow">
-        <div class="w-8 h-6 rounded overflow-hidden shadow-sm flex-shrink-0 border border-gray-200 mt-0.5">
-          <svg viewBox="0 0 800 600" class="w-full h-full">
-            <rect width="800" height="600" fill="#007FFF"/>
-            <polygon points="0,600 0,480 640,0 800,0 800,120 160,600" fill="#FCD116"/>
-            <polygon points="0,600 0,530 710,0 800,0 800,70 90,600" fill="#CE1021"/>
-            <polygon points="120,60 145,135 85,90 155,90 95,135" fill="#FCD116"/>
-          </svg>
-        </div>
-        <div>
-          <div class="font-heading font-black text-xs uppercase tracking-wider text-slate-900">DRC</div>
-          <div class="text-[11px] text-slate-500 leading-snug mt-1">
-            Access to the Democratic Republic of Congo — a growing market of opportunity.
+        </div><!-- end map container -->
+      </div><!-- end center col -->
+
+      <!-- RIGHT: CAR & Regional Markets -->
+      <div class="z-40 flex-1 flex justify-end">
+        <div ref="regionalRef"
+          class="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 w-[210px] flex items-start gap-3 hover:shadow-2xl transition-all hover:-translate-y-0.5">
+          <div class="w-9 h-9 rounded-full bg-amber-50 text-[#D17F00] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+            </svg>
           </div>
-        </div>
-      </div>
-
-      <!-- Floating Card 3: Regional Markets (Bottom-Right) -->
-      <div class="absolute bottom-4 right-0 sm:right-2 z-30 bg-white rounded-xl shadow-xl border border-gray-100/90 p-4 max-w-[210px] sm:max-w-[230px] flex items-start gap-3 hover:shadow-2xl transition-shadow">
-        <div class="w-8 h-8 rounded-full bg-emerald-50 text-[#0E5832] flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-          </svg>
-        </div>
-        <div>
-          <div class="font-heading font-black text-xs uppercase tracking-wider text-slate-900">REGIONAL MARKETS</div>
-          <div class="text-[11px] text-slate-500 leading-snug mt-1">
-            Gateway to East and Central Africa and global markets.
+          <div>
+            <div class="font-black text-xs uppercase tracking-wider text-slate-800">CAR &amp; REGIONAL</div>
+            <div class="text-[11px] text-slate-500 leading-snug mt-1">Central African Republic, Northern Uganda trade corridors &amp; global markets.</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+
+const containerRef = ref(null)
+const indicatorRef = ref(null)
+const drcRef       = ref(null)
+const ssRef        = ref(null)
+const regionalRef  = ref(null)
+const lines        = ref([])
+
+function computeLines () {
+  if (!containerRef.value || !indicatorRef.value) return
+
+  const cRect = containerRef.value.getBoundingClientRect()
+  const iRect = indicatorRef.value.getBoundingClientRect()
+
+  const ix = iRect.left + iRect.width  / 2 - cRect.left
+  const iy = iRect.top  + iRect.height / 2 - cRect.top
+
+  const result = []
+
+  // DRC (on the left) - connects straight from the red indicator
+  if (drcRef.value) {
+    const r = drcRef.value.getBoundingClientRect()
+    result.push({
+      x1: ix, y1: iy,
+      x2: r.right - cRect.left,
+      y2: r.top + r.height / 2 - cRect.top,
+      color: '#D17F00', marker: 'arr-orange'
+    })
+  }
+
+  // South Sudan (at the top) - connects straight from the red indicator
+  if (ssRef.value) {
+    const r = ssRef.value.getBoundingClientRect()
+    result.push({
+      x1: ix, y1: iy,
+      x2: r.left + r.width / 2 - cRect.left,
+      y2: r.bottom - cRect.top,
+      color: '#D00004', marker: 'arr-red'
+    })
+  }
+
+  // Regional Markets (on the right) - connects straight from the red indicator
+  if (regionalRef.value) {
+    const r = regionalRef.value.getBoundingClientRect()
+    result.push({
+      x1: ix, y1: iy,
+      x2: r.left - cRect.left,
+      y2: r.top + r.height / 2 - cRect.top,
+      color: '#F59E0B', marker: 'arr-amber'
+    })
+  }
+
+  lines.value = result
+}
+
+let resizeObserver = null
+
+onMounted(async () => {
+  await nextTick()
+  computeLines()
+  setTimeout(computeLines, 100)
+  setTimeout(computeLines, 400)
+  window.addEventListener('resize', computeLines)
+  if (typeof ResizeObserver !== 'undefined' && containerRef.value) {
+    resizeObserver = new ResizeObserver(computeLines)
+    resizeObserver.observe(containerRef.value)
+  }
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', computeLines)
+  if (resizeObserver) resizeObserver.disconnect()
+})
+</script>

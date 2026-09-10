@@ -1,22 +1,18 @@
 <template>
-  <footer class="bg-[#071F13] text-slate-300 pt-16 pb-12 border-t border-emerald-950">
+  <footer class="bg-[#0A0D14] text-slate-300 pt-16 pb-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-emerald-900/50">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
         <!-- Col 1: Brand Info -->
         <div class="space-y-4 md:col-span-1">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-[#0E5832] flex items-center justify-center border border-emerald-700/50">
-              <svg class="w-6 h-6 text-[#EAB308]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <div>
-              <span class="font-heading font-black text-lg text-white tracking-wide">ARUA SEZ</span>
-              <p class="text-[10px] text-emerald-400 font-semibold uppercase tracking-wider">Special Economic Zone</p>
-            </div>
-          </div>
+          <RouterLink to="/" class="inline-flex items-center gap-2 group" title="Arua SEZ">
+            <img 
+              src="/arua_sez_logo_white.svg" 
+              alt="Arua SEZ Logo" 
+              class="h-12 w-auto object-contain transition-transform group-hover:scale-105" 
+            />
+          </RouterLink>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Uganda's prime export-oriented economic zone, unlocking cross-border industrial trade with the DRC and South Sudan.
+            Unlocking Trade. Powering Industry. Creating Opportunity. Uganda's prime Free Economic Zone connecting to over 100M consumers across DRC, South Sudan, and CAR.
           </p>
         </div>
 
@@ -24,10 +20,11 @@
         <div>
           <h4 class="text-white font-heading font-bold text-xs uppercase tracking-wider mb-4">Quick Links</h4>
           <ul class="space-y-2.5 text-xs text-slate-400">
-            <li><a href="#about" class="hover:text-[#EAB308] transition-colors">About Arua SEZ</a></li>
-            <li><a href="#the-zone" class="hover:text-[#EAB308] transition-colors">The Strategic Zone</a></li>
-            <li><a href="#industries" class="hover:text-[#EAB308] transition-colors">Priority Industries</a></li>
-            <li><a href="#trade" class="hover:text-[#EAB308] transition-colors">Export &amp; Trade Corridors</a></li>
+            <li><RouterLink to="/about" class="hover:text-[#F59E0B] transition-colors">About Arua SEZ</RouterLink></li>
+            <li><RouterLink to="/sectors" class="hover:text-[#F59E0B] transition-colors">Priority Sectors</RouterLink></li>
+            <li><RouterLink to="/incentives" class="hover:text-[#F59E0B] transition-colors">Investor Incentives</RouterLink></li>
+            <li><RouterLink to="/contact" class="hover:text-[#F59E0B] transition-colors">Partner With Us</RouterLink></li>
+            <li><RouterLink to="/contact" class="hover:text-[#F59E0B] transition-colors">Contact Development Office</RouterLink></li>
           </ul>
         </div>
 
@@ -35,32 +32,37 @@
         <div>
           <h4 class="text-white font-heading font-bold text-xs uppercase tracking-wider mb-4">Investor Access</h4>
           <ul class="space-y-2.5 text-xs text-slate-400">
-            <li><RouterLink to="/admin" class="hover:text-[#EAB308] transition-colors">Admin &amp; Investor Portal</RouterLink></li>
-            <li><a href="#invest" class="hover:text-[#EAB308] transition-colors">Apply for Zone Plot</a></li>
-            <li><a href="#resources" class="hover:text-[#EAB308] transition-colors">Download Master Plan</a></li>
-            <li><a href="#resources" class="hover:text-[#EAB308] transition-colors">Incentives &amp; Tax Holidays</a></li>
+            <li><RouterLink to="/contact" class="hover:text-[#F59E0B] transition-colors">Submit Investment Inquiry</RouterLink></li>
+            <li><RouterLink to="/incentives" class="hover:text-[#F59E0B] transition-colors">UIA Framework &amp; Tax Holidays</RouterLink></li>
+            <li><RouterLink to="/sectors" class="hover:text-[#F59E0B] transition-colors">Core Processing Activities</RouterLink></li>
+            <li><RouterLink to="/admin" class="hover:text-[#F59E0B] transition-colors">Admin &amp; Investor Portal</RouterLink></li>
           </ul>
         </div>
 
         <!-- Col 4: Regional Contact -->
         <div>
-          <h4 class="text-white font-heading font-bold text-xs uppercase tracking-wider mb-4">Regional Office</h4>
+          <h4 class="text-white font-heading font-bold text-xs uppercase tracking-wider mb-4">Development Office</h4>
           <address class="not-italic text-xs text-slate-400 space-y-2">
-            <p>Arua City, West Nile Region</p>
-            <p>Republic of Uganda</p>
-            <p class="pt-1 text-[#EAB308] font-medium">invest@aruasez.go.ug</p>
-            <p>+256 (0) 414 000 000</p>
+            <p class="font-medium text-slate-200">Plot 22A - 22D Ujio Road,</p>
+            <p>River Oli Division, Arua City</p>
+            <p>West Nile Region, Republic of Uganda</p>
+            <p class="pt-1">
+              <a href="mailto:info@aruasez.ug" class="text-[#F59E0B] font-medium hover:underline">info@aruasez.ug</a>
+            </p>
+            <p class="text-slate-300 font-semibold">
+              <a href="tel:+256701117851" class="hover:text-[#F59E0B] transition-colors">+256 701 117 851</a>
+            </p>
           </address>
         </div>
       </div>
 
       <!-- Bottom Bar -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-        <p>&copy; {{ new Date().getFullYear() }} Arua Special Economic Zone Limited (Arua SEZ). All rights reserved.</p>
+        <p>&copy; {{ new Date().getFullYear() }} Arua Special Economic Zone (Arua SEZ). All rights reserved.</p>
         <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-slate-400 transition-colors">Terms of Investment</a>
-          <RouterLink to="/admin" class="text-emerald-400 hover:text-emerald-300 transition-colors">Admin Dashboard →</RouterLink>
+          <RouterLink to="/about" class="hover:text-slate-400 transition-colors">Governance &amp; Accountability</RouterLink>
+          <RouterLink to="/contact" class="hover:text-slate-400 transition-colors">Inquiries &amp; EOI</RouterLink>
+          <RouterLink to="/admin" class="text-amber-400 hover:text-amber-300 font-semibold transition-colors">Admin Dashboard →</RouterLink>
         </div>
       </div>
     </div>

@@ -204,7 +204,7 @@
           </div>
 
           <!-- Quick Actions Panel -->
-          <div class="rounded-xl bg-brand-navy text-white p-6 shadow-sm">
+          <div class="rounded-xl bg-brand-black text-white p-6 shadow-sm border border-slate-800">
             <h3 class="font-bold text-white font-heading text-base mb-2">Zone Quick Actions</h3>
             <p class="text-xs text-slate-300 mb-4">Common administrative operations and documents.</p>
             <div class="space-y-2">

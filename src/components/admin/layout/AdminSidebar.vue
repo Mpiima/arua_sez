@@ -10,22 +10,21 @@
     <!-- Sidebar Container -->
     <aside 
       :class="[
-        'fixed top-0 bottom-0 left-0 z-50 w-64 bg-brand-navy text-slate-300 border-r border-slate-800 flex flex-col transition-transform duration-300 ease-in-out lg:translate-x-0',
+        'fixed top-0 bottom-0 left-0 z-50 w-64 bg-brand-black text-slate-300 border-r border-slate-800 flex flex-col transition-transform duration-300 ease-in-out lg:translate-x-0',
         isOpen ? 'translate-x-0' : '-translate-x-full'
       ]"
     >
       <!-- Sidebar Header -->
-      <div class="h-20 flex items-center justify-between px-6 border-b border-slate-800">
-        <RouterLink to="/admin" class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center">
-            <svg class="w-5 h-5 text-brand-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
-          </div>
-          <div>
-            <div class="font-heading font-bold text-white text-base leading-none">ARUA SEZ</div>
-            <div class="text-[10px] text-brand-gold font-medium uppercase tracking-wider mt-1">Admin Panel</div>
-          </div>
+      <div class="h-20 flex items-center justify-between px-5 border-b border-slate-800">
+        <RouterLink to="/admin" class="flex items-center gap-2.5 group">
+          <img 
+            src="/arua_sez_logo_white.svg" 
+            alt="Arua SEZ Logo" 
+            class="h-9 w-auto object-contain transition-transform group-hover:scale-105" 
+          />
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-brand-gold/15 text-brand-gold border border-brand-gold/30">
+            Admin
+          </span>
         </RouterLink>
 
         <!-- Mobile Close Button -->
@@ -86,7 +85,7 @@
             </svg>
             <span>Inquiries</span>
           </div>
-          <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-emerald/20 text-brand-emerald font-semibold">5 New</span>
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-red/15 text-brand-red font-bold">5 New</span>
         </a>
 
         <a 
