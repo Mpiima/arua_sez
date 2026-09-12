@@ -190,7 +190,7 @@
                 </svg>
               </div>
               <div>
-                <div class="font-heading font-black text-3xl sm:text-4xl text-[#D00004] leading-none">Up to 20%</div>
+                <div class="font-heading font-black text-3xl sm:text-4xl text-[#D00004] leading-none">20% +</div>
                 <div class="text-xs font-extrabold uppercase tracking-wider text-slate-800 mt-1">COST ADVANTAGE</div>
                 <div class="text-[11px] text-gray-500 mt-0.5">Over Kampala &amp; Nairobi Freight</div>
               </div>
@@ -227,6 +227,7 @@
           </div>
         </div>
       </section>
+
 
       <!-- ═══════════════════════════════════════════════
            STRATEGIC ADVANTAGE & INTERACTIVE MAP
@@ -346,11 +347,11 @@
             <!-- 2: Mining & Mineral Processing (GOLD REFINING) -->
             <div class="group bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-xl hover:border-amber-400 transition-all duration-300">
               <div class="relative h-48 overflow-hidden bg-slate-900">
-                <div class="absolute inset-0 bg-gradient-to-br from-amber-600/90 to-slate-950 flex items-center justify-center p-6 text-center">
-                  <div class="space-y-1">
-                    <span class="text-3xl">🪙</span>
-                    <h4 class="text-white font-extrabold text-base tracking-wide">Gold &amp; Minerals</h4>
-                    <p class="text-[11px] text-amber-200">Eastern DRC &amp; West Nile Corridors</p>
+                <img src="/images/aruasez (3).jpeg" alt="Arua SEZ site development" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-70"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-slate-900/50 to-transparent flex items-end p-4">
+                  <div>
+                    <h4 class="text-white font-extrabold text-sm tracking-wide">Gold &amp; Minerals</h4>
+                    <p class="text-[11px] text-amber-200 mt-0.5">Eastern DRC &amp; West Nile Corridors</p>
                   </div>
                 </div>
                 <div class="absolute -bottom-4 left-4 w-9 h-9 rounded-full bg-[#F59E0B] border-2 border-white shadow-md flex items-center justify-center text-white z-10">
@@ -401,9 +402,113 @@
       </section>
 
       <!-- ═══════════════════════════════════════════════
-           WHY ARUA SEZ: Clean Investor Advantages (3 Cards)
+           RAW MATERIAL AGGREGATOR MODEL
            ═══════════════════════════════════════════════ -->
       <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <!-- Section Header -->
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-2">The Arua SEZ Model</div>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
+              We Aggregate. You Process. <span class="text-[#D17F00]">Everyone Profits.</span>
+            </h2>
+            <p class="text-sm sm:text-base text-slate-500 mt-3 leading-relaxed">
+              Arua SEZ removes the biggest barrier for manufacturers: guaranteed raw material supply. We act as the primary aggregator so investors can focus on processing, not sourcing.
+            </p>
+          </div>
+
+          <!-- Flow Diagram -->
+          <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-0">
+
+            <!-- Step 1: Farmers -->
+            <div class="flex flex-col items-center text-center w-full lg:w-56 flex-shrink-0">
+              <div class="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-4">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div class="font-heading font-black text-sm uppercase tracking-wider text-slate-800">Regional Farmers</div>
+              <div class="text-xs text-slate-500 mt-1 max-w-[160px] leading-snug">West Nile, DRC & South Sudan smallholders</div>
+              <div class="mt-3 flex flex-wrap justify-center gap-1">
+                <span class="text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2 py-0.5">Groundnuts</span>
+                <span class="text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2 py-0.5">Sesame</span>
+                <span class="text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2 py-0.5">Honey</span>
+                <span class="text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2 py-0.5">Avocado</span>
+              </div>
+            </div>
+
+            <!-- Arrow 1 -->
+            <div class="flex lg:flex-col items-center gap-2 px-2 lg:px-6 py-2 lg:py-0">
+              <div class="hidden lg:block h-0.5 w-12 bg-gradient-to-r from-emerald-300 to-amber-400"></div>
+              <div class="hidden lg:flex w-8 h-8 rounded-full bg-amber-400/10 border border-amber-300/40 items-center justify-center">
+                <svg class="w-4 h-4 text-[#D17F00]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+              </div>
+              <!-- Mobile arrow -->
+              <svg class="lg:hidden w-6 h-6 text-amber-400 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </div>
+
+            <!-- Step 2: Arua SEZ (Centre - Highlighted) -->
+            <div class="flex flex-col items-center text-center w-full lg:w-64 flex-shrink-0">
+              <div class="w-20 h-20 rounded-2xl bg-[#0B0F19] flex items-center justify-center mb-4 shadow-xl ring-4 ring-[#F59E0B]/20">
+                <svg class="w-9 h-9 text-[#F59E0B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+              </div>
+              <div class="font-heading font-black text-base uppercase tracking-wider text-slate-900">Arua SEZ</div>
+              <div class="text-xs text-[#D00004] font-semibold uppercase tracking-wider mt-0.5">Primary Aggregator</div>
+              <div class="text-xs text-slate-500 mt-2 max-w-[200px] leading-snug">Buys, grades, stores & supplies guaranteed raw materials to zone tenants</div>
+              <div class="mt-3 px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-[11px] font-bold text-[#D17F00] uppercase tracking-wide">
+                Zero Supply Chain Risk
+              </div>
+            </div>
+
+            <!-- Arrow 2 -->
+            <div class="flex lg:flex-col items-center gap-2 px-2 lg:px-6 py-2 lg:py-0">
+              <div class="hidden lg:block h-0.5 w-12 bg-gradient-to-r from-amber-400 to-[#D00004]/60"></div>
+              <div class="hidden lg:flex w-8 h-8 rounded-full bg-red-500/10 border border-red-300/40 items-center justify-center">
+                <svg class="w-4 h-4 text-[#D00004]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+              </div>
+              <svg class="lg:hidden w-6 h-6 text-red-400 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </div>
+
+            <!-- Step 3: Investors -->
+            <div class="flex flex-col items-center text-center w-full lg:w-56 flex-shrink-0">
+              <div class="w-16 h-16 rounded-2xl bg-red-50 border border-red-100 flex items-center justify-center mb-4">
+                <svg class="w-8 h-8 text-[#D00004]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+              </div>
+              <div class="font-heading font-black text-sm uppercase tracking-wider text-slate-800">Zone Investors</div>
+              <div class="text-xs text-slate-500 mt-1 max-w-[160px] leading-snug">Process, package & export to 100M+ regional consumers</div>
+              <div class="mt-3 flex flex-wrap justify-center gap-1">
+                <span class="text-[10px] font-semibold bg-red-50 text-red-700 border border-red-200 rounded-full px-2 py-0.5">Milling</span>
+                <span class="text-[10px] font-semibold bg-red-50 text-red-700 border border-red-200 rounded-full px-2 py-0.5">Refining</span>
+                <span class="text-[10px] font-semibold bg-red-50 text-red-700 border border-red-200 rounded-full px-2 py-0.5">Packaging</span>
+                <span class="text-[10px] font-semibold bg-red-50 text-red-700 border border-red-200 rounded-full px-2 py-0.5">Export</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom CTA -->
+          <div class="mt-12 text-center">
+            <RouterLink
+              to="/sectors"
+              class="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-[#D00004] hover:text-[#B30003] transition-colors"
+            >
+              <span>Explore the full enterprise model</span>
+              <span class="text-sm">→</span>
+            </RouterLink>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════
+           WHY ARUA SEZ: Clean Investor Advantages (3 Cards)
+           ═══════════════════════════════════════════════ -->
+      <section class="py-20 bg-[#F8FAFC] border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-3xl mx-auto mb-14">
             <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-2">
@@ -418,43 +523,70 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-lg transition-all">
-              <div class="w-12 h-12 rounded-xl bg-red-100 text-[#D00004] flex items-center justify-center font-black mb-5">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z"/></svg>
+            <!-- Card 1: Fiscal Incentives — with site photo -->
+            <div class="group rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+              <div class="relative h-40 overflow-hidden flex-shrink-0">
+                <img src="/images/slid (2).jpeg" alt="Arua SEZ site" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <div class="absolute bottom-3 left-4">
+                  <div class="w-9 h-9 rounded-lg bg-[#D00004] text-white flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z"/></svg>
+                  </div>
+                </div>
               </div>
-              <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Statutory Fiscal Incentives</h3>
-              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                10-year corporate income tax holidays, 0% import duty on machinery and plant equipment, and full foreign exchange repatriation.
-              </p>
-              <RouterLink to="/incentives" class="text-xs font-bold text-[#D00004] hover:underline">
-                View Tax Framework →
-              </RouterLink>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Statutory Fiscal Incentives</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 flex-1">
+                  10-year corporate income tax holidays, 0% import duty on machinery and plant equipment, and full foreign exchange repatriation.
+                </p>
+                <RouterLink to="/incentives" class="text-xs font-bold text-[#D00004] hover:underline">
+                  View Tax Framework →
+                </RouterLink>
+              </div>
             </div>
 
-            <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-lg transition-all">
-              <div class="w-12 h-12 rounded-xl bg-amber-100 text-[#D17F00] flex items-center justify-center font-black mb-5">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <!-- Card 2: Infrastructure — with real photo -->
+            <div class="group rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+              <div class="relative h-40 overflow-hidden flex-shrink-0">
+                <img src="/images/aruasez (1).jpeg" alt="Arua SEZ infrastructure" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <div class="absolute bottom-3 left-4">
+                  <div class="w-9 h-9 rounded-lg bg-[#D17F00] text-white flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  </div>
+                </div>
               </div>
-              <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Plug &amp; Play Serviced Plots</h3>
-              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                Dedicated high-voltage industrial power, treated water, heavy-vehicle paved roads, and on-site customs post in Arua City.
-              </p>
-              <RouterLink to="/incentives" class="text-xs font-bold text-[#D17F00] hover:underline">
-                View Infrastructure Specs →
-              </RouterLink>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Plug &amp; Play Serviced Plots</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 flex-1">
+                  Dedicated high-voltage industrial power, treated water, heavy-vehicle paved roads, and on-site customs post in Arua City.
+                </p>
+                <RouterLink to="/incentives" class="text-xs font-bold text-[#D17F00] hover:underline">
+                  View Infrastructure Specs →
+                </RouterLink>
+              </div>
             </div>
 
-            <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-lg transition-all">
-              <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-black mb-5">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <!-- Card 3: Licensing — with team photo -->
+            <div class="group rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col bg-white">
+              <div class="relative h-40 overflow-hidden flex-shrink-0">
+                <img src="/images/aruasez (2).jpeg" alt="Arua SEZ leadership" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                <div class="absolute bottom-3 left-4">
+                  <div class="w-9 h-9 rounded-lg bg-[#0B0F19] text-white flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  </div>
+                </div>
               </div>
-              <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Fast-Track Licensing</h3>
-              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                One-stop administrative clearance for URSB incorporation, UIA investment licensing, NEMA environmental clearances, and work permits.
-              </p>
-              <RouterLink to="/contact" class="text-xs font-bold text-slate-900 hover:underline">
-                Partner With Us →
-              </RouterLink>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Fast-Track Licensing</h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 flex-1">
+                  One-stop administrative clearance for URSB incorporation, UIA investment licensing, NEMA environmental clearances, and work permits.
+                </p>
+                <RouterLink to="/contact" class="text-xs font-bold text-slate-900 hover:underline">
+                  Partner With Us →
+                </RouterLink>
+              </div>
             </div>
           </div>
         </div>
@@ -463,8 +595,22 @@
       <!-- ═══════════════════════════════════════════════
            CALL TO ACTION BANNER: Clean & Focused
            ═══════════════════════════════════════════════ -->
-      <section class="py-16 bg-[#0B0F19] text-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <section class="relative py-16 bg-[#0B0F19] text-white overflow-hidden">
+        <!-- Real photo background -->
+        <div class="absolute inset-0">
+          <img src="/images/slid (1).jpeg" alt="Arua SEZ HQ" class="w-full h-full object-cover object-center opacity-15" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/90 to-[#0B0F19]/80"></div>
+        <!-- Floating team photos -->
+        <div class="absolute right-8 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-3 opacity-30">
+          <div class="w-20 h-20 rounded-xl overflow-hidden border border-white/10">
+            <img src="/images/aruasez (22).jpeg" alt="Team" class="w-full h-full object-cover object-center" />
+          </div>
+          <div class="w-20 h-20 rounded-xl overflow-hidden border border-white/10">
+            <img src="/images/aruasez (10).jpeg" alt="Site" class="w-full h-full object-cover object-center" />
+          </div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs font-semibold uppercase tracking-wider text-amber-300">
             <span>Arua Special Economic Zone</span>
           </div>
@@ -514,14 +660,29 @@ const slides = [
     subtitle: 'Arua City, West Nile'
   },
   {
+    image: '/images/slid (1).jpeg',
+    title: 'Gateway to Regional Prosperity',
+    subtitle: 'Arua Special Economic Zone HQ'
+  },
+  {
     image: '/images/manufacturing.jpg',
     title: 'Heavy & Light Manufacturing Hub',
     subtitle: 'Serviced Industrial Plots'
   },
   {
+    image: '/images/aruasez (22).jpeg',
+    title: 'Expert Leadership on the Ground',
+    subtitle: 'Committed to Regional Development'
+  },
+  {
     image: '/images/logistics.jpg',
     title: 'Cross-Border Freight & Trade Corridor',
     subtitle: 'Gateway to DRC & South Sudan'
+  },
+  {
+    image: '/images/aruasez (10).jpeg',
+    title: 'Active Site Development & Coordination',
+    subtitle: 'Building West Nile\'s Industrial Future'
   },
   {
     image: '/images/warehousing.jpg',

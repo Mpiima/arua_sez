@@ -6,347 +6,290 @@
       <!-- ═══════════════════════════════════════════════
            PAGE BANNER
            ═══════════════════════════════════════════════ -->
-      <section class="relative py-20 bg-[#0B0F19] text-white overflow-hidden">
+      <section class="relative py-24 bg-[#0B0F19] text-white overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-20">
-          <img src="/images/hero.jpg" alt="Arua SEZ Aerial Industrial Park" class="w-full h-full object-cover"/>
+          <!-- Abstract tech/infrastructure grid background -->
+          <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         </div>
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/40 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/90 to-transparent z-0"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div class="max-w-3xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-semibold tracking-wider uppercase text-amber-300 mb-4">
-              <span>Investor Support &amp; Benefits</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-xs font-semibold tracking-wider uppercase text-amber-300 mb-5">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              The 19-Point Framework
             </div>
-            <h1 class="font-heading font-black text-4xl sm:text-5xl text-white tracking-tight leading-tight mb-4">
-              Comprehensive Investor Incentives
+            <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight mb-6">
+              Infrastructure &amp; <br/>
+              <span class="text-[#F59E0B]">Investor Incentives</span>
             </h1>
-            <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Backed by the Uganda Investment Authority (UIA) statutory framework, Arua SEZ provides decisive fiscal exemptions, world-class serviced plots, and end-to-end regulatory facilitation.
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+              Arua SEZ provides a highly competitive, investor-friendly environment. Our statutory 19-point framework combines decisive fiscal exemptions, world-class physical infrastructure, and a complete social ecosystem.
             </p>
           </div>
         </div>
       </section>
 
       <!-- ═══════════════════════════════════════════════
-           KEY INCENTIVE METRICS
+           THE "LIVE, WORK, PRODUCE" BENCHMARK
            ═══════════════════════════════════════════════ -->
-      <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
-        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8">
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
-            <!-- 10-Year Holiday -->
-            <div class="pt-4 sm:pt-0 sm:px-3">
-              <div class="font-heading font-black text-3xl sm:text-4xl text-[#D00004] leading-none">10 Yrs</div>
-              <div class="text-xs font-extrabold uppercase tracking-wider text-slate-800 mt-1.5">CIT HOLIDAY</div>
-              <div class="text-[11px] text-gray-500 mt-0.5">Corporate Income Tax for Exporters</div>
+      <section class="py-16 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="flex-1 space-y-4">
+              <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase">
+                COMPETITIVE BENCHMARK
+              </div>
+              <h2 class="font-heading font-black text-3xl text-slate-900 leading-tight">
+                A <span class="text-slate-500">"Live, Work, &amp; Produce"</span> Ecosystem
+              </h2>
+              <p class="text-slate-600 leading-relaxed">
+                Drawing inspiration from successful models like Tatu City in Kenya, Arua SEZ is not merely an industrial park. It is a comprehensive ecosystem adapted to the West Nile and cross-border trade context, seamlessly integrating industrial zones, residential areas, and critical social infrastructure.
+              </p>
             </div>
-
-            <!-- 0% Duty -->
-            <div class="pt-4 sm:pt-0 sm:px-4">
-              <div class="font-heading font-black text-3xl sm:text-4xl text-[#D17F00] leading-none">0% Duty</div>
-              <div class="text-xs font-extrabold uppercase tracking-wider text-slate-800 mt-1.5">IMPORT EXEMPTION</div>
-              <div class="text-[11px] text-gray-500 mt-0.5">On Plant, Machinery &amp; Equipment</div>
-            </div>
-
-            <!-- 100% Foreign Ownership -->
-            <div class="pt-4 sm:pt-0 sm:px-4">
-              <div class="font-heading font-black text-3xl sm:text-4xl text-slate-900 leading-none">100%</div>
-              <div class="text-xs font-extrabold uppercase tracking-wider text-slate-800 mt-1.5">OWNERSHIP &amp; PROFITS</div>
-              <div class="text-[11px] text-gray-500 mt-0.5">Full Repatriation of Capital</div>
-            </div>
-
-            <!-- One-Stop Center -->
-            <div class="pt-4 sm:pt-0 sm:px-4">
-              <div class="font-heading font-black text-3xl sm:text-4xl text-emerald-600 leading-none">Fast-Track</div>
-              <div class="text-xs font-extrabold uppercase tracking-wider text-slate-800 mt-1.5">REGULATORY DESK</div>
-              <div class="text-[11px] text-gray-500 mt-0.5">Dedicated One-Stop Approvals</div>
+            
+            <div class="flex-shrink-0 grid grid-cols-3 gap-4 w-full md:w-auto">
+              <div class="flex flex-col items-center justify-center p-6 bg-[#F8FAFC] rounded-2xl border border-gray-200">
+                <svg class="w-8 h-8 text-[#D00004] mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                <span class="text-sm font-bold text-slate-900">Work</span>
+              </div>
+              <div class="flex flex-col items-center justify-center p-6 bg-[#F8FAFC] rounded-2xl border border-gray-200">
+                <svg class="w-8 h-8 text-[#F59E0B] mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z"/></svg>
+                <span class="text-sm font-bold text-slate-900">Produce</span>
+              </div>
+              <div class="flex flex-col items-center justify-center p-6 bg-[#F8FAFC] rounded-2xl border border-gray-200">
+                <svg class="w-8 h-8 text-emerald-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                <span class="text-sm font-bold text-slate-900">Live</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ═══════════════════════════════════════════════
-           PILLAR 1: FISCAL & TAX INCENTIVES
+           THE 19-POINT FRAMEWORK GRID
            ═══════════════════════════════════════════════ -->
-      <section class="py-20 bg-white">
+      <section class="py-24 bg-[#F8FAFC]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div class="text-center max-w-3xl mx-auto mb-16">
-            <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-2">
-              FISCAL FRAMEWORK
-            </div>
-            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
-              Statutory Fiscal &amp; Tax Exemptions
+            <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900 mb-4">
+              The 19-Point Offer Framework
             </h2>
-            <p class="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed">
-              Operating under Uganda's Free Zone and Special Economic Zone legislation, certified enterprises enjoy significant reductions in upfront capital expenditure and operating overheads.
+            <p class="text-slate-600">
+              A structured breakdown of the physical, operational, and strategic advantages guaranteed to investors within the Arua Special Economic Zone.
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Item 1 -->
-            <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-lg transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-12 h-12 rounded-xl bg-red-100 text-[#D00004] flex items-center justify-center font-black text-lg mb-6">
-                  10Y
+            
+            <!-- Category 1 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+              <div class="h-2 bg-slate-800"></div>
+              <div class="p-8 flex-grow">
+                <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center mb-6">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">
-                  10-Year Corporate Tax Holiday
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Enterprises that export at least 80% of manufactured or processed output outside the EAC qualify for a complete ten-year exemption from corporate income tax.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-slate-200/80 text-[11px] font-bold text-[#D00004] uppercase">
-                Section 21 Income Tax Act
+                <h3 class="font-heading font-black text-xl text-slate-900 mb-6">Physical &amp; Utility Infrastructure</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">1</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Serviced industrial land for development</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">2</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Reliable water supply with backup boreholes</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">3</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Power availability with emphasis on solar/green energy</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center text-xs font-bold">4</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Internal road network within the zone</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <!-- Item 2 -->
-            <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-lg transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-12 h-12 rounded-xl bg-amber-100 text-[#D17F00] flex items-center justify-center font-black text-lg mb-6">
-                  0%
+            <!-- Category 2 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+              <div class="h-2 bg-[#D00004]"></div>
+              <div class="p-8 flex-grow">
+                <div class="w-12 h-12 rounded-xl bg-red-50 text-[#D00004] flex items-center justify-center mb-6">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">
-                  Zero Import Duty &amp; VAT on Capital Goods
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  100% duty-free and VAT-exempt importation of industrial equipment, plants, specialized machinery, raw input materials, and construction inputs.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-slate-200/80 text-[11px] font-bold text-[#D17F00] uppercase">
-                Zero Upfront Tariff Burden
+                <h3 class="font-heading font-black text-xl text-slate-900 mb-6">Business &amp; Operational Advantages</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-xs font-bold">5</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Competitive labour costs</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-xs font-bold">6</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Government support for ease of doing business</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-xs font-bold">7</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Tax incentives and SEZ rebates (Uganda SEZ framework)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-xs font-bold">8</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Fast-tracked licensing and approvals</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <!-- Item 3 -->
-            <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-lg transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-black text-lg mb-6">
-                  FX
+            <!-- Category 3 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+              <div class="h-2 bg-[#F59E0B]"></div>
+              <div class="p-8 flex-grow">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 text-[#F59E0B] flex items-center justify-center mb-6">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">
-                  Unrestricted Capital &amp; Dividend Repatriation
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Free mobility of capital. Investors may freely repatriate 100% of net profits, dividends, royalties, and principal loan repayments in foreign currencies without exchange barriers.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-slate-200/80 text-[11px] font-bold text-slate-900 uppercase">
-                Full Foreign Exchange Freedom
+                <h3 class="font-heading font-black text-xl text-slate-900 mb-6">Strategic Location Benefits</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-xs font-bold">9</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Close proximity to DR Congo and South Sudan borders</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-xs font-bold">10</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Emerging one-stop border systems (similar to Malaba model)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-xs font-bold">11</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Reduced customs and logistics delays</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <!-- Item 4 -->
-            <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-lg transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg mb-6">
-                  WHT
+            <!-- Category 4 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+              <div class="h-2 bg-emerald-600"></div>
+              <div class="p-8 flex-grow">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">
-                  Withholding Tax Relief
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Concessional withholding tax rates on interest payments for foreign loans, dividends, and management fees, preserving operating cash flow.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-slate-200/80 text-[11px] font-bold text-emerald-700 uppercase">
-                Cash Flow Optimization
+                <h3 class="font-heading font-black text-xl text-slate-900 mb-6">Social &amp; Ecosystem Advantages</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-xs font-bold">12</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Access to quality schools within a 10 km radius</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-xs font-bold">13</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Safe and growing urban environment in Arua City</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-xs font-bold">14</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Availability of skilled and semi-skilled labour</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <!-- Item 5 -->
-            <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-lg transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black text-lg mb-6">
-                  R&amp;D
+            <!-- Category 5 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+              <div class="h-2 bg-blue-600"></div>
+              <div class="p-8 flex-grow">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">
-                  100% Depreciation &amp; R&amp;D Deductions
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Generous accelerated capital depreciation allowances on heavy plant investments and 100% deductible scientific research expenditures.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-slate-200/80 text-[11px] font-bold text-blue-700 uppercase">
-                Tax Asset Write-Off
+                <h3 class="font-heading font-black text-xl text-slate-900 mb-6">Cross-Border Expansion Capability</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">15</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Access to cooperative enterprise zones in Congo</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">16</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Storage and distribution linkages across borders</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-xs font-bold">17</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Regional trade facilitation networks</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <!-- Item 6 -->
-            <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:shadow-lg transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-black text-lg mb-6">
-                  DRA
+            <!-- Category 6 -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
+              <div class="h-2 bg-purple-600"></div>
+              <div class="p-8 flex-grow">
+                <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
-                <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">
-                  Customs Duty Drawback Schemes
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Automatic duty drawback mechanism on all packaging materials and interim consumables utilized in manufacturing for international export.
-                </p>
-              </div>
-              <div class="mt-6 pt-4 border-t border-slate-200/80 text-[11px] font-bold text-purple-700 uppercase">
-                Export Processing Protection
+                <h3 class="font-heading font-black text-xl text-slate-900 mb-6">Agricultural &amp; Financial Ecosystem</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center text-xs font-bold">18</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Abundant agricultural raw materials in the region</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="flex-shrink-0 w-6 h-6 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center text-xs font-bold">19</span>
+                    <span class="text-sm text-slate-700 leading-snug pt-0.5">Strong access to agro-processing financing and development funding</span>
+                  </li>
+                </ul>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       <!-- ═══════════════════════════════════════════════
-           PILLAR 2: SERVICED INFRASTRUCTURE (PLUG & PLAY)
+           FISCAL HIGHLIGHTS (UIA INCENTIVES)
            ═══════════════════════════════════════════════ -->
-      <section class="py-20 bg-[#0B0F19] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-5 space-y-6">
-              <div class="text-xs font-extrabold tracking-widest text-[#F59E0B] uppercase">
-                PLUG-AND-PLAY UTILITIES
-              </div>
-              <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-tight">
-                Fully Serviced Industrial Plots
-              </h2>
-              <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
-                Arua SEZ eliminates the friction of greenfield development. Plots are demarcated, titled, and directly connected to critical utilities so investors can break ground immediately.
-              </p>
-
-              <div class="space-y-4 pt-2">
-                <div class="flex items-start gap-3">
-                  <div class="w-6 h-6 rounded-full bg-amber-500/20 text-[#F59E0B] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
-                  <div>
-                    <h4 class="text-sm font-bold text-white">Dedicated High-Voltage Electricity</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">Reliable industrial power substation lines engineered for continuous smelting, milling, and heavy manufacturing.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-3">
-                  <div class="w-6 h-6 rounded-full bg-amber-500/20 text-[#F59E0B] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
-                  <div>
-                    <h4 class="text-sm font-bold text-white">Industrial Water &amp; Effluent Drainage</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">High-volume treated water mains and environmentally compliant central drainage and waste management infrastructure.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-3">
-                  <div class="w-6 h-6 rounded-full bg-amber-500/20 text-[#F59E0B] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
-                  <div>
-                    <h4 class="text-sm font-bold text-white">Heavy-Duty Internal Road Network</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">Engineered for multi-axle freight trucks, container handling, and seamless docking with loading terminals.</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-3">
-                  <div class="w-6 h-6 rounded-full bg-amber-500/20 text-[#F59E0B] flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
-                  <div>
-                    <h4 class="text-sm font-bold text-white">24/7 Secured Perimeter &amp; Customs Gate</h4>
-                    <p class="text-xs text-slate-400 mt-0.5">CCTV surveillance, guarded checkpoints, and dedicated on-site Customs Post for prompt sealing and documentation.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Visual / Spec Card -->
-            <div class="lg:col-span-7 bg-slate-900/90 rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-2xl">
-              <div class="border-b border-slate-800 pb-6 mb-6 flex items-center justify-between">
-                <div>
-                  <span class="text-xs font-bold text-[#D00004] uppercase tracking-wider">Site Specifications</span>
-                  <h3 class="text-xl font-bold text-white mt-1">Plot Allocation Matrix</h3>
-                </div>
-                <span class="px-3 py-1 rounded-full bg-emerald-950 text-emerald-300 text-xs font-semibold border border-emerald-800">
-                  Ready for Allocation
-                </span>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
-                  <div class="text-slate-400">Total Phase 1 Land</div>
-                  <div class="text-lg font-bold text-white mt-1">12.7+ Hectares</div>
-                  <div class="text-[11px] text-slate-500 mt-1">Clean freehold title with master zoning</div>
-                </div>
-
-                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
-                  <div class="text-slate-400">Lease Terms</div>
-                  <div class="text-lg font-bold text-white mt-1">Up to 49 Years</div>
-                  <div class="text-[11px] text-slate-500 mt-1">Renewable long-term industrial leases</div>
-                </div>
-
-                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
-                  <div class="text-slate-400">Customs Clearance</div>
-                  <div class="text-lg font-bold text-white mt-1">On-Site Bonded</div>
-                  <div class="text-[11px] text-slate-500 mt-1">In-zone Uganda Revenue Authority (URA) desk</div>
-                </div>
-
-                <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
-                  <div class="text-slate-400">Telecommunications</div>
-                  <div class="text-lg font-bold text-white mt-1">High-Speed Fiber</div>
-                  <div class="text-[11px] text-slate-500 mt-1">Direct fiber optic backbone connectivity</div>
-                </div>
-              </div>
-
-              <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-xs text-slate-400 text-center sm:text-left">
-                  Request site surveys, soil profiles, and plot boundary dimensions.
-                </p>
-                <RouterLink 
-                  to="/contact" 
-                  class="w-full sm:w-auto text-center px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-slate-950 bg-[#F59E0B] hover:bg-amber-400 transition-all"
-                >
-                  Request Plot Dossier →
-                </RouterLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════
-           PILLAR 3: STREAMLINED LICENSING & ONE-STOP SHOP
-           ═══════════════════════════════════════════════ -->
-      <section class="py-20 bg-white">
+      <section class="py-24 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-3xl mx-auto mb-16">
             <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-2">
-              REGULATORY EFFICIENCY
+              STATUTORY FISCAL FRAMEWORK
             </div>
-            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
-              One-Stop Institutional Facilitation
+            <h2 class="font-heading font-black text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
+              Unmatched Tax &amp; Capital Freedom
             </h2>
-            <p class="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed">
-              We eliminate administrative friction. Through coordinated collaboration with national agencies, investors obtain all necessary licenses, permits, and clearances in record time.
-            </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-lg transition-all text-center">
-              <div class="w-12 h-12 rounded-xl bg-red-100 text-[#D00004] flex items-center justify-center font-black mx-auto mb-4">
-                01
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Metric 1 -->
+            <div class="p-6 rounded-2xl bg-[#0B0F19] text-white flex flex-col justify-between shadow-xl">
+              <div>
+                <div class="font-heading font-black text-4xl text-[#F59E0B] mb-2">10 Yrs</div>
+                <h4 class="font-bold text-lg mb-2">Corporate Tax Holiday</h4>
+                <p class="text-sm text-slate-400">Complete exemption from corporate income tax for enterprises exporting 80%+ outside the EAC.</p>
               </div>
-              <h4 class="font-heading font-bold text-sm text-slate-900 mb-1">Company Incorporation</h4>
-              <p class="text-xs text-slate-600">Expedited URSB registration and tax identification (TIN) issuance.</p>
             </div>
 
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-lg transition-all text-center">
-              <div class="w-12 h-12 rounded-xl bg-amber-100 text-[#D17F00] flex items-center justify-center font-black mx-auto mb-4">
-                02
+            <!-- Metric 2 -->
+            <div class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="font-heading font-black text-4xl text-[#D00004] mb-2">0%</div>
+                <h4 class="font-bold text-lg text-slate-900 mb-2">Import Duty &amp; VAT</h4>
+                <p class="text-sm text-slate-600">Duty-free and VAT-exempt importation of industrial equipment, plants, and specialized machinery.</p>
               </div>
-              <h4 class="font-heading font-bold text-sm text-slate-900 mb-1">UIA Investment License</h4>
-              <p class="text-xs text-slate-600">Fast-tracked Free Zone developer and operator licensing via UIA.</p>
             </div>
 
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-lg transition-all text-center">
-              <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-black mx-auto mb-4">
-                03
+            <!-- Metric 3 -->
+            <div class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="font-heading font-black text-4xl text-slate-900 mb-2">100%</div>
+                <h4 class="font-bold text-lg text-slate-900 mb-2">Capital Repatriation</h4>
+                <p class="text-sm text-slate-600">Freely repatriate 100% of net profits, dividends, and principal loan repayments without exchange barriers.</p>
               </div>
-              <h4 class="font-heading font-bold text-sm text-slate-900 mb-1">Environmental &amp; Building</h4>
-              <p class="text-xs text-slate-600">Structured NEMA environmental impact approvals and engineering permits.</p>
             </div>
 
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-lg transition-all text-center">
-              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black mx-auto mb-4">
-                04
+            <!-- Metric 4 -->
+            <div class="p-6 rounded-2xl bg-white border border-gray-200 flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="font-heading font-black text-4xl text-emerald-600 mb-2">WHT</div>
+                <h4 class="font-bold text-lg text-slate-900 mb-2">Withholding Tax Relief</h4>
+                <p class="text-sm text-slate-600">Concessional withholding tax rates on interest payments for foreign loans and management fees.</p>
               </div>
-              <h4 class="font-heading font-bold text-sm text-slate-900 mb-1">Work Permits &amp; Visas</h4>
-              <p class="text-xs text-slate-600">Assistance with Class G work permits for international technical teams.</p>
             </div>
           </div>
         </div>
@@ -366,7 +309,7 @@
           <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
             <RouterLink 
               to="/contact" 
-              class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg text-xs font-bold tracking-wider uppercase text-white bg-[#D00004] hover:bg-[#B30003] shadow-lg transition-all"
+              class="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg text-xs font-bold tracking-wider uppercase text-slate-900 bg-[#F59E0B] hover:bg-amber-400 shadow-lg transition-all"
             >
               <span>APPLY FOR INCENTIVES &amp; PLOTS</span>
               <span class="text-sm">→</span>

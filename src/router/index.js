@@ -27,6 +27,12 @@ const routes = [
     meta: { title: 'Investor Incentives — Arua SEZ' }
   },
   {
+    path: '/model',
+    name: 'EnterpriseModel',
+    component: () => import('@/views/EnterpriseModelView.vue'),
+    meta: { title: 'Enterprise Model — Arua SEZ' }
+  },
+  {
     path: '/contact',
     name: 'Contact',
     component: () => import('@/views/ContactView.vue'),
@@ -37,6 +43,23 @@ const routes = [
     name: 'AdminDashboard',
     component: () => import('@/views/admin/AdminDashboardView.vue'),
     meta: { title: 'Admin Dashboard — Arua SEZ' }
+  },
+  {
+    path: '/blogs',
+    name: 'Blogs',
+    component: () => import('@/views/BlogsView.vue'),
+    meta: { title: 'News & Updates — Arua SEZ' }
+  },
+  {
+    path: '/resources',
+    name: 'Resources',
+    component: () => import('@/views/ResourcesView.vue'),
+    meta: { title: 'Resources & Downloads — Arua SEZ' }
+  },
+  {
+    path: '/blogs/:slug',
+    name: 'BlogDetail',
+    component: () => import('@/views/BlogDetailView.vue')
   },
   {
     path: '/:pathMatch(.*)*',
