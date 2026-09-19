@@ -2,10 +2,12 @@
   <div id="app-root" class="min-h-screen flex flex-col font-sans">
     <RouterView />
     <WhatsAppWidget phone-number="256701117851" />
+    <BackToTop />
   </div>
 </template>
 
 <script setup>
 import { RouterView } from 'vue-router'
 import WhatsAppWidget from '@/components/WhatsAppWidget.vue'
+import BackToTop from '@/components/BackToTop.vue'
 </script>

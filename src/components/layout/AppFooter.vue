@@ -62,7 +62,7 @@
         <div class="flex items-center gap-6">
           <RouterLink to="/about" class="hover:text-slate-400 transition-colors">Governance &amp; Accountability</RouterLink>
           <RouterLink to="/contact" class="hover:text-slate-400 transition-colors">Inquiries &amp; EOI</RouterLink>
-          <RouterLink to="/admin" class="text-amber-400 hover:text-amber-300 font-semibold transition-colors">Admin Dashboard →</RouterLink>
+          <!-- <RouterLink to="/admin" class="text-amber-400 hover:text-amber-300 font-semibold transition-colors">Admin Dashboard →</RouterLink> -->
         </div>
       </div>
     </div>
