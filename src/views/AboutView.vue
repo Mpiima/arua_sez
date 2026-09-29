@@ -52,9 +52,9 @@
                     "To establish West Nile as a competitive industrial and trade hub that drives inclusive prosperity and regional integration."
                   </p>
                 </div>
-                <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-400">
+                <!-- <div class="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-400">
                   Strategic focus across Uganda, South Sudan, DRC, and CAR.
-                </div>
+                </div> -->
               </div>
             </div>
 
@@ -75,9 +75,9 @@
                     "To provide world-class infrastructure, investor incentives, and regulatory efficiency that attract responsible investment and create dignified employment for the people of West Nile."
                   </p>
                 </div>
-                <div class="mt-8 pt-6 border-t border-red-400/30 text-xs text-red-100">
+                <!-- <div class="mt-8 pt-6 border-t border-red-400/30 text-xs text-red-100">
                   Full alignment with the Uganda Investment Authority (UIA).
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

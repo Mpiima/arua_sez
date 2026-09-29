@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arua SEZ — Investment Brief 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #D00004; --gold: #D17F00; --amber: #F59E0B; --dark: #0B0F19; }
+    body { font-family: Inter, sans-serif; background: #fff; color: #1e293b; font-size: 13px; line-height: 1.6; }
+    .print-bar { position:fixed;top:0;left:0;right:0;z-index:999;background:#0B0F19;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 2px 12px rgba(0,0,0,.4); }
+    .print-bar span { color:#94a3b8;font-size:12px; } .print-bar strong { color:#fff; }
+    .print-btn { display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:8px;background:#D00004;color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer; }
+    .wrapper { max-width:860px;margin:60px auto 0;padding:40px 32px 60px; }
+    .cover { background:#0B0F19;border-radius:16px;padding:48px;margin-bottom:40px;position:relative;overflow:hidden; }
+    .cover::before { content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(209,127,0,.15),transparent 60%); }
+    .cover-badge { display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);color:#F59E0B;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;position:relative;z-index:1; }
+    .cover h1 { color:#fff;font-size:38px;font-weight:900;line-height:1.1;margin-bottom:8px;position:relative;z-index:1; }
+    .cover h1 em { color:#F59E0B;font-style:normal; }
+    .cover-sub { color:#94a3b8;font-size:14px;position:relative;z-index:1;margin-bottom:32px; }
+    .cover-stats { display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1);padding-top:28px;position:relative;z-index:1; }
+    .cover-stat { padding:0 20px 0 0; } .cover-stat+.cover-stat { border-left:1px solid rgba(255,255,255,.1);padding-left:20px; }
+    .cover-stat .val { color:#F59E0B;font-size:26px;font-weight:900;line-height:1; } .cover-stat .val.red { color:#D00004; }
+    .cover-stat .lbl { color:rgba(255,255,255,.55);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:4px; }
+    .section { margin-bottom:36px; }
+    .section-label { font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#D00004;margin-bottom:8px; }
+    .section h2 { font-size:20px;font-weight:900;color:#0B0F19;margin-bottom:12px; }
+    .section p { color:#475569;margin-bottom:10px; }
+    .grid-2 { display:grid;grid-template-columns:1fr 1fr;gap:16px; }
+    .grid-3 { display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px; }
+    .card { background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px; }
+    .card h3 { font-size:12px;font-weight:800;color:#0B0F19;margin-bottom:6px; }
+    .card p { font-size:11.5px;color:#64748b; }
+    .card .tag { display:inline-block;margin-bottom:10px;padding:2px 10px;border-radius:999px;background:rgba(209,127,0,.1);color:#D17F00;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase; }
+    .card .tag.red { background:rgba(208,0,4,.08);color:#D00004; }
+    .inc-list { list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px; }
+    .inc-list li { display:flex;align-items:flex-start;gap:8px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px 14px;font-size:11.5px;color:#334155; }
+    .inc-list li::before { content:"✓";color:#D00004;font-weight:900;font-size:11px;flex-shrink:0;margin-top:1px; }
+    hr { border:none;border-top:1px solid #e2e8f0;margin:32px 0; }
+    .contact-block { background:#0B0F19;border-radius:14px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap; }
+    .contact-block h3 { color:#fff;font-size:18px;font-weight:900;margin-bottom:4px; }
+    .contact-block p { color:#94a3b8;font-size:12px; }
+    .contact-link { display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:10px;background:#D00004;color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;white-space:nowrap; }
+    @media print { .print-bar{display:none!important} .wrapper{margin-top:0;padding:20px} }
+  </style>
+</head>
+<body>
+  <div class="print-bar">
+    <span><strong>Arua SEZ</strong> Investment Brief 2025</span>
+    <button class="print-btn" onclick="window.print()">&#11015; Save as PDF</button>
+  </div>
+  <div class="wrapper">
+    <div class="cover">
+      <div class="cover-badge">Confidential Investment Brief 2025</div>
+      <h1>Arua Special<br/><em>Economic Zone</em></h1>
+      <p class="cover-sub">West Nile, Uganda &middot; Gateway to Central &amp; East Africa</p>
+      <div class="cover-stats">
+        <div class="cover-stat"><div class="val">487</div><div class="lbl">Hectares Total Land</div></div>
+        <div class="cover-stat"><div class="val red">0%</div><div class="lbl">Import Duty on Machinery</div></div>
+        <div class="cover-stat"><div class="val">10 Yr</div><div class="lbl">Corporate Tax Holiday</div></div>
+        <div class="cover-stat"><div class="val red">100M+</div><div class="lbl">Consumers within 500km</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-label">Executive Summary</div>
+      <h2>The Strategic Case for Arua SEZ</h2>
+      <p>Arua Special Economic Zone is Uganda's premier cross-border industrial platform, located in Arua City within 100km of DRC and 160km of South Sudan. The zone offers a complete industrial ecosystem backed by Uganda's 19-point statutory incentive framework.</p>
+    </div>
+    <hr/>
+    <div class="section">
+      <div class="section-label">Location Advantage</div>
+      <h2>Positioned at the Heart of Three Markets</h2>
+      <div class="grid-3">
+        <div class="card"><div class="tag red">&lt; 100 km</div><h3>DRC Border &mdash; Vurra</h3><p>Direct access to Eastern Congo&apos;s artisanal mining output and a consumer base of 100M+.</p></div>
+        <div class="card"><div class="tag">~ 160 km</div><h3>South Sudan Border</h3><p>Gateway to Juba and an under-supplied market of 11M importing essential goods daily.</p></div>
+        <div class="card"><div class="tag">~ 480 km</div><h3>Kampala &mdash; National HQ</h3><p>Connected via paved highway with planned rail corridor upgrade.</p></div>
+      </div>
+    </div>
+    <hr/>
+    <div class="section">
+      <div class="section-label">Priority Sectors</div>
+      <h2>6 High-Turnover Investment Sectors</h2>
+      <div class="grid-2">
+        <div class="card"><div class="tag">High Volume Export</div><h3>Agriculture &amp; Agro-Processing</h3><p>Groundnuts, rice, palm oil, coffee, cassava, oilseeds, and shea butter.</p></div>
+        <div class="card"><div class="tag red">High Capital Value</div><h3>Mining &amp; Mineral Processing</h3><p>Gold refining and mineral smelting from Eastern Congo and West Nile prospects.</p></div>
+        <div class="card"><div class="tag">Fast Moving Goods</div><h3>Manufacturing &amp; Ethanol</h3><p>Ethanol, confectionery, soaps, steel fabrication, and bonded transit yards.</p></div>
+        <div class="card"><div class="tag red">Cross-Border Trade</div><h3>Logistics &amp; Warehousing</h3><p>Bonded warehousing, cold chain, and last-mile distribution for DRC &amp; South Sudan.</p></div>
+        <div class="card"><div class="tag">Emerging Sector</div><h3>Fisheries Processing</h3><p>Nile perch and tilapia from Lake Albert &mdash; East Africa&apos;s most productive fresh-water zone.</p></div>
+        <div class="card"><div class="tag red">Service Sector</div><h3>Financial &amp; Trade Services</h3><p>Forex, microfinance, insurance, and customs clearing for the trade corridor.</p></div>
+      </div>
+    </div>
+    <hr/>
+    <div class="section">
+      <div class="section-label">Investor Incentives</div>
+      <h2>19-Point Statutory Incentive Framework</h2>
+      <ul class="inc-list" style="margin-top:14px">
+        <li>10-year corporate income tax holiday</li>
+        <li>0% import duty on plant &amp; machinery</li>
+        <li>VAT exemption on zone inputs</li>
+        <li>Full foreign exchange repatriation</li>
+        <li>100% capital repatriation on exit</li>
+        <li>Withholding tax exemptions on dividends</li>
+        <li>No minimum capital requirements</li>
+        <li>One-stop licensing clearance (21 days)</li>
+        <li>Work permit fast-track for foreign staff</li>
+        <li>49-year land-use leases available</li>
+      </ul>
+    </div>
+    <hr/>
+    <div class="section">
+      <div class="section-label">Infrastructure</div>
+      <h2>Plug &amp; Play Industrial Plots</h2>
+      <div class="grid-3">
+        <div class="card"><h3>&#9889; High-Voltage Power</h3><p>Dedicated industrial power connection with planned 33kV substation upgrade.</p></div>
+        <div class="card"><h3>&#128167; Treated Water</h3><p>Industrial-grade water supply with on-site storage and distribution network.</p></div>
+        <div class="card"><h3>&#128739; Paved Road Network</h3><p>Heavy-vehicle access roads connecting to the Arua-Kampala highway.</p></div>
+        <div class="card"><h3>&#128083; On-Site Customs</h3><p>Dedicated URA customs post for streamlined import/export clearance.</p></div>
+        <div class="card"><h3>&#127760; Fibre Connectivity</h3><p>High-speed internet backbone for tech-enabled operations.</p></div>
+        <div class="card"><h3>&#128230; Warehouse Units</h3><p>Modular units available for immediate lease. Build-to-suit for anchor tenants.</p></div>
+      </div>
+    </div>
+    <hr/>
+    <div class="contact-block">
+      <div>
+        <h3>Ready to Invest? Let&apos;s Talk.</h3>
+        <p>Submit an Expression of Interest or book an investor site visit.</p>
+        <p style="margin-top:8px;color:#64748b">&#128205; Arua City, West Nile, Uganda &nbsp;&middot;&nbsp; &#128231; info@aruasez.go.ug</p>
+      </div>
+      <a href="/contact" class="contact-link">Submit Expression of Interest &#8594;</a>
+    </div>
+    <p style="text-align:center;color:#94a3b8;font-size:10px;margin-top:28px">&copy; 2025 Arua Special Economic Zone &nbsp;&middot;&nbsp; aruasez.go.ug</p>
+  </div>
+</body>
+</html>

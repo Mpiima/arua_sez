@@ -71,6 +71,12 @@ const routes = [
     component: () => import('@/views/ResourcesView.vue'),
     meta: { title: 'Publications — Arua SEZ' }
   },
+  {
+    path: '/faq',
+    name: 'FAQ',
+    component: () => import('@/views/FaqView.vue'),
+    meta: { title: 'Frequently Asked Questions — Arua SEZ' }
+  },
   // ── Media ───────────────────────────────────────────────────────────────────
   {
     path: '/blogs',

@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="min-h-screen flex flex-col bg-white font-sans text-slate-800">
     <AppHeader />
     <main class="flex-grow">
@@ -24,6 +24,9 @@
                 currentSlide === index ? 'scale-105' : 'scale-100',
                 slide.fit || 'object-cover object-center'
               ]"
+              :loading="index === 0 ? 'eager' : 'lazy'"
+              :decoding="index === 0 ? 'sync' : 'async'"
+              :fetchpriority="index === 0 ? 'high' : 'low'"
             />
           </div>
           <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/30 to-transparent"></div>
@@ -58,6 +61,10 @@
                 <RouterLink to="/incentives" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-bold tracking-wider uppercase text-white bg-black/40 hover:bg-black/60 border border-white/30 backdrop-blur-sm transition-all">
                   <span>INCENTIVES</span><span class="text-sm text-[#F59E0B]">&#8595;</span>
                 </RouterLink>
+                <a href="/documents/aruasez_profile.pdf" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-bold tracking-wider uppercase text-[#F59E0B] bg-transparent hover:bg-white/10 border border-[#F59E0B]/50 backdrop-blur-sm transition-all">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                  <span>INVESTMENT BRIEF</span>
+                </a>
               </div>
             </div>
             <!-- <div class="lg:col-span-4 flex justify-start lg:justify-end">
@@ -115,8 +122,72 @@
         </div>
       </section>
 
+      <!-- ═══ STATS STRIP ═══ -->
+      <div class="bg-[#0B0F19] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 divide-x divide-white/10">
+
+            <div class="flex flex-col items-center justify-center py-5 px-3 gap-0.5">
+              <span class="font-heading font-black text-2xl sm:text-3xl text-[#F59E0B] leading-none">487</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-white/60 mt-1">Hectares</span>
+              <span class="text-[10px] text-white/35">Total Zone Land</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center py-5 px-3 gap-0.5">
+              <span class="font-heading font-black text-2xl sm:text-3xl text-[#F59E0B] leading-none">0%</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-white/60 mt-1">Import Duty</span>
+              <span class="text-[10px] text-white/35">Machinery &amp; Equipment</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center py-5 px-3 gap-0.5">
+              <span class="font-heading font-black text-2xl sm:text-3xl text-[#F59E0B] leading-none">10 Yr</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-white/60 mt-1">Tax Holiday</span>
+              <span class="text-[10px] text-white/35">Corporate Income Tax</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center py-5 px-3 gap-0.5">
+              <span class="font-heading font-black text-2xl sm:text-3xl text-[#D00004] leading-none">&lt;100km</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-white/60 mt-1">To DRC Border</span>
+              <span class="text-[10px] text-white/35">Arua City Gateway</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center py-5 px-3 gap-0.5">
+              <span class="font-heading font-black text-2xl sm:text-3xl text-[#D00004] leading-none">100M+</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-white/60 mt-1">Consumers</span>
+              <span class="text-[10px] text-white/35">Within 500km Radius</span>
+            </div>
+
+            <div class="flex flex-col items-center justify-center py-5 px-3 gap-0.5">
+              <span class="font-heading font-black text-2xl sm:text-3xl text-[#F59E0B] leading-none">6</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-white/60 mt-1">Priority Sectors</span>
+              <span class="text-[10px] text-white/35">Open for Investment</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ URGENCY BANNER ═══ -->
+      <div class="bg-gradient-to-r from-[#D00004] via-[#b30003] to-[#8b0002] border-b border-red-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <span class="flex-shrink-0 inline-flex items-center justify-center w-6 h-6 rounded-full bg-white/20 text-white text-xs font-black animate-pulse">!</span>
+            <p class="text-xs sm:text-sm font-semibold text-white leading-snug">
+              <strong class="font-extrabold">Phase 1 Allocation Now Open</strong>
+              <span class="hidden sm:inline text-white/80"> &mdash; </span>
+              <span class="text-white/90">Pre-commercial plot rates available to early investors. Limited allocation.</span>
+            </p>
+          </div>
+          <RouterLink to="/contact"
+            class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-white text-[#D00004] text-[11px] font-extrabold tracking-wider uppercase hover:bg-red-50 transition-colors whitespace-nowrap shadow-sm">
+            Secure Your Plot &#8594;
+          </RouterLink>
+        </div>
+      </div>
+
       <!-- METRICS BAR with Animated Counters -->
-      <section
+
+      <!-- <section
         class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 relative z-20 reveal-up"
         :class="metricsReveal.revealed.value ? 'revealed' : ''"
         :ref="metricsReveal.revealRef"
@@ -176,14 +247,14 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Wave Divider -->
-      <div class="wave-divider bg-white">
+      <!-- <div class="wave-divider bg-white">
         <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="h-10 w-full" fill="#F8FAFC">
           <path d="M0,0 C360,48 1080,48 1440,0 L1440,48 L0,48 Z"/>
         </svg>
-      </div>
+      </div> -->
 
       <!-- STRATEGIC ADVANTAGE & MAP -->
       <section class="py-20 lg:py-24 bg-[#F8FAFC] overflow-hidden">
@@ -263,12 +334,9 @@
             <div class="group bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-xl hover:border-amber-400 transition-all duration-300 reveal-up"
               :class="sectorCards[0].revealed.value ? 'revealed' : ''" :ref="sectorCards[0].revealRef" style="transition-delay:0ms">
               <div class="relative h-48 overflow-hidden bg-slate-100">
-                <img src="/images/agro.jpg" alt="Agro-processing in Arua SEZ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-                <div class="absolute -bottom-4 left-4 w-9 h-9 rounded-full bg-[#D17F00] border-2 border-white shadow-md flex items-center justify-center text-white z-10">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-                </div>
+                <img src="/images/agro_processing.jpg" alt="Agro-processing in Arua SEZ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
               </div>
-              <div class="p-6 pt-7 flex-1 flex flex-col justify-between">
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900 mb-2">Agriculture &amp; Agro-Processing</h3>
                   <p class="text-xs text-slate-600 leading-relaxed mb-4">Industrial cleaning, sorting, packing, and refining of groundnuts, rice, palm oil, coffee, cassava, oilseeds, and shea butter.</p>
@@ -283,18 +351,9 @@
             <div class="group bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-xl hover:border-amber-400 transition-all duration-300 reveal-up"
               :class="sectorCards[1].revealed.value ? 'revealed' : ''" :ref="sectorCards[1].revealRef" style="transition-delay:120ms">
               <div class="relative h-48 overflow-hidden bg-slate-900">
-                <img src="/images/aruasez (3).jpeg" alt="Arua SEZ site development" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-70"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-slate-900/50 to-transparent flex items-end p-4">
-                  <div>
-                    <h4 class="text-white font-extrabold text-sm tracking-wide">Gold &amp; Minerals</h4>
-                    <p class="text-[11px] text-amber-200 mt-0.5">Eastern DRC &amp; West Nile Corridors</p>
-                  </div>
-                </div>
-                <div class="absolute -bottom-4 left-4 w-9 h-9 rounded-full bg-[#F59E0B] border-2 border-white shadow-md flex items-center justify-center text-white z-10">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                </div>
+                <img src="/images/gold_mining.jpg" alt="Gold mining operation" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"/>
               </div>
-              <div class="p-6 pt-7 flex-1 flex flex-col justify-between">
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900 mb-2">Mining &amp; Mineral Processing</h3>
                   <p class="text-xs text-slate-600 leading-relaxed mb-4">Gold refining and mineral smelting, directly leveraging artisanal mining from Eastern Congo and newly identified mineral prospects in West Nile.</p>
@@ -309,12 +368,9 @@
             <div class="group bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-xl hover:border-slate-800 transition-all duration-300 reveal-up"
               :class="sectorCards[2].revealed.value ? 'revealed' : ''" :ref="sectorCards[2].revealRef" style="transition-delay:240ms">
               <div class="relative h-48 overflow-hidden bg-slate-100">
-                <img src="/images/manufacturing.jpg" alt="Manufacturing in Arua SEZ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-                <div class="absolute -bottom-4 left-4 w-9 h-9 rounded-full bg-[#0B0F19] border-2 border-white shadow-md flex items-center justify-center text-white z-10">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-                </div>
+                <img src="/images/ethanol_manufacturing.jpg" alt="Ethanol and manufacturing plant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
               </div>
-              <div class="p-6 pt-7 flex-1 flex flex-col justify-between">
+              <div class="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900 mb-2">Manufacturing &amp; Ethanol</h3>
                   <p class="text-xs text-slate-600 leading-relaxed mb-4">Ethanol and industrial alcohol from cassava and sugarcane; confectionery; aromatic soaps; plus steel lines, timber, and bonded transit yards.</p>
@@ -344,13 +400,7 @@
             <div class="group rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col bg-white reveal-up"
               :class="whyCards[0].revealed.value ? 'revealed' : ''" :ref="whyCards[0].revealRef" style="transition-delay:0ms">
               <div class="relative h-40 overflow-hidden flex-shrink-0">
-                <img src="/images/slid (2).jpeg" alt="Arua SEZ site" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                <div class="absolute bottom-3 left-4">
-                  <div class="w-9 h-9 rounded-lg bg-[#D00004] text-white flex items-center justify-center">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z"/></svg>
-                  </div>
-                </div>
+                <img src="/images/fiscal_incentives.jpg" alt="Statutory Fiscal Incentives" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
               </div>
               <div class="p-6 flex-1 flex flex-col">
                 <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Statutory Fiscal Incentives</h3>
@@ -362,13 +412,7 @@
             <div class="group rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col bg-white reveal-up"
               :class="whyCards[1].revealed.value ? 'revealed' : ''" :ref="whyCards[1].revealRef" style="transition-delay:120ms">
               <div class="relative h-40 overflow-hidden flex-shrink-0">
-                <img src="/images/aruasez (1).jpeg" alt="Arua SEZ infrastructure" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                <div class="absolute bottom-3 left-4">
-                  <div class="w-9 h-9 rounded-lg bg-[#D17F00] text-white flex items-center justify-center">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  </div>
-                </div>
+                <img src="/images/arua_sez_plots.jpg" alt="Plug and Play Serviced Plots" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
               </div>
               <div class="p-6 flex-1 flex flex-col">
                 <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Plug &amp; Play Serviced Plots</h3>
@@ -380,13 +424,7 @@
             <div class="group rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col bg-white reveal-up"
               :class="whyCards[2].revealed.value ? 'revealed' : ''" :ref="whyCards[2].revealRef" style="transition-delay:240ms">
               <div class="relative h-40 overflow-hidden flex-shrink-0">
-                <img src="/images/aruasez (2).jpeg" alt="Arua SEZ leadership" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                <div class="absolute bottom-3 left-4">
-                  <div class="w-9 h-9 rounded-lg bg-[#0B0F19] text-white flex items-center justify-center">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                  </div>
-                </div>
+                <img src="/images/aruasez (20).jpeg" alt="Fast-Track Licensing" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
               </div>
               <div class="p-6 flex-1 flex flex-col">
                 <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Fast-Track Licensing</h3>
@@ -479,6 +517,57 @@
         </div>
       </section>
 
+      <!-- ═══ FAQ SECTION ═══ -->
+      <section class="py-20 bg-[#F8FAFC] border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <!-- Header -->
+          <div class="text-center mb-12">
+            <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-2">INVESTOR FAQ</div>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">Questions We Hear Most</h2>
+            <p class="text-sm text-slate-500 mt-3">Everything you need to know before making your investment decision.</p>
+          </div>
+
+          <!-- Accordion -->
+          <div class="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+
+            <div v-for="(faq, i) in faqItems" :key="i">
+              <button
+                @click="openFaq = openFaq === i ? null : i"
+                class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-slate-50 transition-colors"
+                :aria-expanded="openFaq === i"
+              >
+                <span class="font-heading font-bold text-sm sm:text-base text-slate-900 leading-snug">{{ faq.q }}</span>
+                <span class="flex-shrink-0 w-7 h-7 rounded-full border border-slate-200 flex items-center justify-center transition-all duration-300"
+                  :class="openFaq === i ? 'bg-[#D00004] border-[#D00004] rotate-45' : 'bg-white'">
+                  <svg class="w-3.5 h-3.5 transition-colors" :class="openFaq === i ? 'text-white' : 'text-slate-400'" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 5v14M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="overflow-hidden transition-all duration-300 ease-in-out"
+                :style="openFaq === i ? 'max-height: 400px; opacity: 1' : 'max-height: 0; opacity: 0'"
+              >
+                <div class="px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                  {{ faq.a }}
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CTA below FAQ -->
+          <div class="mt-10 text-center">
+            <p class="text-sm text-slate-500 mb-4">Still have questions? Our team is ready to assist.</p>
+            <RouterLink to="/contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-bold tracking-wider uppercase text-white bg-[#D00004] hover:bg-[#B30003] shadow-md transition-all">
+              <span>SPEAK TO OUR TEAM</span><span class="text-sm">&#8594;</span>
+            </RouterLink>
+          </div>
+
+        </div>
+      </section>
+
       <!-- CTA BANNER -->
       <section class="relative py-16 bg-[#0B0F19] text-white overflow-hidden">
         <div class="absolute inset-0">
@@ -508,6 +597,10 @@
             <RouterLink to="/contact" class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-lg text-xs font-bold tracking-wider uppercase text-white bg-[#D00004] hover:bg-[#B30003] shadow-lg transition-all">
               <span>SUBMIT EXPRESSION OF INTEREST</span><span class="text-sm">&#8594;</span>
             </RouterLink>
+            <a href="/documents/aruasez_profile.pdf" target="_blank" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg text-xs font-bold tracking-wider uppercase text-[#F59E0B] bg-white/10 hover:bg-white/20 border border-[#F59E0B]/40 transition-all">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+              <span>DOWNLOAD INVESTMENT BRIEF</span>
+            </a>
             <RouterLink to="/about" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg text-xs font-bold tracking-wider uppercase text-slate-200 bg-white/10 hover:bg-white/20 border border-white/20 transition-all">
               <span>ABOUT THE ZONE</span>
             </RouterLink>
@@ -529,6 +622,43 @@ import UgandaInteractiveMap from '@/components/UgandaInteractiveMap.vue'
 import PartnersStrip from '@/components/PartnersStrip.vue'
 import { useScrollReveal, useScrollRevealList } from '@/composables/useScrollReveal'
 import { useCountUp } from '@/composables/useCountUp'
+
+// FAQ accordion
+const openFaq = ref(null)
+const faqItems = [
+  {
+    q: 'Can foreign nationals and companies invest in Arua SEZ?',
+    a: 'Yes. Arua SEZ is fully open to foreign investors. Under the Uganda Investment Authority (UIA) framework, foreign companies can register, obtain investment licenses, and hold land-use rights within the zone. Full foreign exchange repatriation of profits is also guaranteed.'
+  },
+  {
+    q: 'What is the minimum plot size available for lease?',
+    a: 'Industrial plots start from 0.5 hectares, scaling up to multi-hectare anchor allocations depending on your sector and operational requirements. Plots come serviced with high-voltage power, water connections, and paved road access.'
+  },
+  {
+    q: 'How long does the licensing and registration process take?',
+    a: 'Through our one-stop administrative clearance, URSB incorporation, UIA investment licensing, and NEMA environmental clearances can typically be processed within 21 working days. Our development office guides investors through every step.'
+  },
+  {
+    q: 'What tax incentives are available to zone investors?',
+    a: 'Zone investors benefit from a 10-year corporate income tax holiday, 0% import duty on plant machinery and equipment, VAT exemptions on zone inputs, and full repatriation of foreign exchange. This is governed by the Uganda Free Zones Act.'
+  },
+  {
+    q: 'Is raw material supply guaranteed for agro-processing investors?',
+    a: 'Yes. The SEZ operates a guaranteed raw material aggregation model in partnership with West Nile farmer cooperatives and cross-border supply chains from DRC and South Sudan, covering groundnuts, rice, palm oil, cassava, and shea butter.'
+  },
+  {
+    q: 'What infrastructure is already in place on site?',
+    a: 'The current site has paved internal access roads, boundary demarcation, a site office, and connection points for high-voltage power and treated water. Additional industrial-grade infrastructure is being installed in phases aligned with investor occupancy.'
+  },
+  {
+    q: 'How close is Arua SEZ to international borders?',
+    a: 'Arua City is less than 100 km from the DRC border at Vurra and approximately 160 km from the South Sudan border. This positions the zone as the lowest-cost logistics hub for serving both markets simultaneously from Uganda.'
+  },
+  {
+    q: 'How do I express formal interest or reserve a plot?',
+    a: 'You can submit an Expression of Interest through our Contact page or reach our development office directly via the WhatsApp channel on this site. Our team will respond within 48 hours to schedule a site visit or investor briefing call.'
+  }
+]
 
 // Scroll Reveal Instances
 const metricsReveal      = useScrollReveal({ threshold: 0.15 })
