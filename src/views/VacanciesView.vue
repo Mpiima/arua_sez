@@ -1,77 +1,171 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col bg-white font-sans text-slate-800">
     <AppHeader />
 
-    <!-- Hero -->
-    <section class="relative h-72 sm:h-96 overflow-hidden">
-      <img src="/images/vacancies_hero.jpg" alt="Join Our Team" class="absolute inset-0 w-full h-full object-cover object-center" />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0B0F19]/80 via-[#0B0F19]/50 to-transparent"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-end pb-12">
-        <div class="text-xs font-extrabold tracking-widest text-[#F59E0B] uppercase mb-2">Jobs & Tenders</div>
-        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-white leading-tight">Vacancies</h1>
-        <p class="mt-2 text-sm sm:text-base text-slate-300 max-w-lg">Join a team driving industrial transformation across West Nile and the Great Lakes region.</p>
-      </div>
-    </section>
+    <main class="flex-grow">
+      <!-- Hero with Side-by-Side Split: 100% Clear & Bright Photo -->
+      <section class="bg-[#0B0F19] py-14 sm:py-20 border-b-4 border-[#D00004]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            
+            <!-- Left: Clear Text & Actions -->
+            <div class="lg:col-span-6 space-y-5">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-semibold tracking-wider uppercase text-amber-300">
+                <span>Jobs &amp; Careers</span>
+              </div>
+              <h1 class="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+                Career Opportunities at Arua SEZ
+              </h1>
+              <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+                Join our dedicated team driving industrial transformation, modern infrastructure, and cross-border trade in West Nile and the Great Lakes region.
+              </p>
+              <div class="pt-2 flex flex-wrap items-center gap-3">
+                <a
+                  href="#openings"
+                  class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#D00004] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#B30003] transition-colors"
+                >
+                  View Openings
+                </a>
+                <a
+                  href="mailto:info@aruasez.com?subject=Unsolicited CV Submission"
+                  class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-600 text-slate-200 text-xs font-bold uppercase tracking-wider hover:bg-slate-800 transition-colors"
+                >
+                  Submit Your CV
+                </a>
+              </div>
+            </div>
 
-    <!-- Why Join Us -->
-    <section class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-2">Why Arua SEZ</div>
-          <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">Join Our Team</h2>
-          <p class="mt-3 text-slate-500 text-sm max-w-xl mx-auto leading-relaxed">Be part of Uganda's most ambitious industrial development — creating jobs, transforming livelihoods, and connecting the region to global markets.</p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div v-for="perk in perks" :key="perk.title" class="p-6 rounded-2xl border border-gray-100 bg-[#F8FAFC] text-center hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" :class="perk.iconBg" v-html="perk.icon"></div>
-            <div class="font-heading font-bold text-slate-900 mb-1">{{ perk.title }}</div>
-            <div class="text-xs text-slate-500 leading-relaxed">{{ perk.desc }}</div>
+            <!-- Right: Unobstructed, Bright Real Team Photograph -->
+            <div class="lg:col-span-6">
+              <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-700 bg-slate-900 group">
+                <img
+                  src="/images/aruasez (22).jpeg"
+                  alt="Arua SEZ Leadership and Operational Team"
+                  class="w-full h-[320px] sm:h-[420px] object-cover object-center group-hover:scale-102 transition-transform duration-500"
+                />
+                <div class="p-4 bg-slate-900/95 border-t border-slate-800 flex items-center justify-between">
+                  <div>
+                    <div class="text-xs font-bold text-white">Arua SEZ On-Ground Team</div>
+                    <div class="text-[11px] text-slate-400">Strategic management &amp; site execution staff</div>
+                  </div>
+                  <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#F59E0B] bg-amber-400/10 px-2 py-0.5 rounded border border-amber-400/20">
+                    Arua SEZ
+                  </span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Open Positions -->
-    <section class="py-16 bg-[#F8FAFC]">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between mb-8">
-          <div>
+      <!-- Why Join Us -->
+      <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-12">
+            <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-2">Work at Arua SEZ</div>
+            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">Why Build Your Career Here</h2>
+            <p class="mt-3 text-slate-600 text-sm leading-relaxed">
+              Be part of Uganda's premier special economic zone — creating sustainable employment, strengthening value chains, and connecting regional enterprises to global markets.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div
+              v-for="(perk, i) in perks"
+              :key="perk.title"
+              class="p-7 rounded-xl border border-gray-200 bg-white hover:border-[#D00004]/30 hover:shadow-md transition-all flex flex-col"
+            >
+              <div class="text-xs font-extrabold tracking-widest text-[#D00004] mb-3">{{ String(i + 1).padStart(2, '0') }}</div>
+              <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">{{ perk.title }}</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{{ perk.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real Team & Operations Showcase (Clear, High-Res Photos) -->
+      <section class="py-16 bg-[#F8FAFC] border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-8">
+            <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-2">Life at Arua SEZ</div>
+            <h3 class="font-heading font-extrabold text-2xl text-slate-900">Our Team in Action</h3>
+            <p class="text-slate-600 text-sm mt-1">
+              Field surveys, stakeholder engagement, technical planning, and community development across the zone.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div
+              v-for="item in teamPhotos"
+              :key="item.src"
+              class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-all flex flex-col"
+            >
+              <!-- Unobstructed Bright Image -->
+              <div class="relative h-60 sm:h-64 overflow-hidden bg-slate-100">
+                <img
+                  :src="item.src"
+                  :alt="item.title"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <h4 class="font-heading font-bold text-base text-slate-900 mb-1">{{ item.title }}</h4>
+                  <p class="text-xs text-slate-600 leading-relaxed">{{ item.subtitle }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Open Positions Anchor -->
+      <section id="openings" class="py-16 bg-white scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-8">
             <div class="text-xs font-extrabold tracking-widest text-[#D00004] uppercase mb-1">Current Openings</div>
             <h2 class="font-heading font-extrabold text-2xl text-slate-900">Open Positions</h2>
           </div>
-        </div>
 
-        <!-- Empty State -->
-        <div class="bg-white rounded-2xl border border-dashed border-gray-200 py-16 px-6 text-center">
-          <div class="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
+          <!-- Clean Notice Box -->
+          <div class="bg-[#F8FAFC] rounded-2xl border border-gray-200 py-14 px-6 text-center">
+            <h3 class="font-heading font-bold text-lg text-slate-800 mb-2">No Vacancies Currently Available</h3>
+            <p class="text-slate-500 text-sm max-w-md mx-auto leading-relaxed mb-6">
+              There are no active postings at this time. However, our operations are scaling rapidly across engineering, administration, logistics, and planning.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="mailto:info@aruasez.com?subject=Unsolicited CV Submission"
+                class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#D00004] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#B30003] transition-colors"
+              >
+                Submit Your CV
+              </a>
+              <RouterLink
+                to="/contact"
+                class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-300 text-slate-700 text-xs font-bold uppercase tracking-wider hover:bg-gray-100 transition-colors"
+              >
+                Contact HR Office
+              </RouterLink>
+            </div>
           </div>
-          <h3 class="font-heading font-bold text-slate-700 mb-2">No Vacancies Currently Available</h3>
-          <p class="text-slate-400 text-sm max-w-sm mx-auto leading-relaxed">There are no open positions at this time. Please check back regularly — we are growing fast.</p>
-          <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="mailto:info@aruasez.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0B0F19] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#1E293B] transition-colors">
-              Submit Your CV <span>→</span>
+
+          <!-- Alert Notification Strip -->
+          <div class="mt-8 p-6 rounded-xl bg-[#0B0F19] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div class="font-heading font-bold text-base mb-1">Stay Notified for Future Openings</div>
+              <p class="text-slate-400 text-xs">Reach out directly to receive email notifications when new job postings go live.</p>
+            </div>
+            <a
+              href="mailto:info@aruasez.com?subject=Subscribe to Job Alerts"
+              class="flex-shrink-0 inline-flex items-center justify-center px-6 py-2.5 rounded-lg bg-[#F59E0B] text-slate-950 hover:bg-amber-400 text-xs font-bold uppercase tracking-wider transition-colors"
+            >
+              Subscribe to Alerts
             </a>
-            <RouterLink to="/contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-200 text-slate-700 text-xs font-bold uppercase tracking-wider hover:bg-gray-50 transition-colors">
-              Contact HR Team
-            </RouterLink>
           </div>
         </div>
-
-        <!-- Notify Me -->
-        <div class="mt-8 p-6 rounded-2xl bg-gradient-to-br from-[#0B0F19] to-[#1E293B] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <div class="font-heading font-bold text-base mb-1">Stay Notified</div>
-            <p class="text-slate-400 text-xs">Send your email to be notified when new positions open.</p>
-          </div>
-          <a href="mailto:info@aruasez.com?subject=Job Alert Subscription" class="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#D00004] hover:bg-[#B30003] text-white text-xs font-bold uppercase tracking-wider transition-colors">
-            Notify Me
-          </a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <AppFooter />
   </div>
@@ -84,22 +178,34 @@ import { RouterLink } from 'vue-router'
 
 const perks = [
   {
-    title: 'Impact-Driven Work',
-    desc: 'Your work directly supports industrialisation, job creation, and economic growth in West Nile.',
-    iconBg: 'bg-red-50 text-[#D00004]',
-    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
+    title: 'Impact-Driven Mission',
+    desc: 'Contribute directly to sustainable industrialisation, economic transformation, and dignified job creation in West Nile.',
   },
   {
-    title: 'Growth & Learning',
-    desc: 'Work alongside regional and international experts in a fast-growing special economic zone.',
-    iconBg: 'bg-amber-50 text-amber-600',
-    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>',
+    title: 'Professional Growth',
+    desc: 'Collaborate with multidisciplinary engineering, trade, and governance professionals on large-scale infrastructure projects.',
   },
   {
-    title: 'Competitive Package',
-    desc: 'Fair remuneration, professional development, and a purpose-led working environment.',
-    iconBg: 'bg-emerald-50 text-emerald-600',
-    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+    title: 'Competitive Packages',
+    desc: 'Fair remuneration, clear career pathways, and an inclusive work environment aligned with international standards.',
+  },
+]
+
+const teamPhotos = [
+  {
+    src: '/images/aruasez (4).jpeg',
+    title: 'Strategy & Governance',
+    subtitle: 'Cross-functional alignment with regional leadership and stakeholders.',
+  },
+  {
+    src: '/images/aruasez (15).jpeg',
+    title: 'Operations & Engineering',
+    subtitle: 'Field team driving on-site infrastructure and survey activities.',
+  },
+  {
+    src: '/images/aruasez (7).jpeg',
+    title: 'Community Engagement',
+    subtitle: 'Connecting local talent and youth groups with zone opportunities.',
   },
 ]
 </script>

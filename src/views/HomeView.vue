@@ -128,7 +128,7 @@
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 divide-x divide-white/10">
 
             <div class="flex flex-col items-center justify-center py-5 px-3 gap-0.5">
-              <span class="font-heading font-black text-2xl sm:text-3xl text-[#F59E0B] leading-none">487</span>
+              <span class="font-heading font-black text-2xl sm:text-3xl text-[#F59E0B] leading-none">14</span>
               <span class="text-[10px] font-extrabold uppercase tracking-widest text-white/60 mt-1">Hectares</span>
               <span class="text-[10px] text-white/35">Total Zone Land</span>
             </div>
@@ -330,56 +330,113 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="group bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-xl hover:border-amber-400 transition-all duration-300 reveal-up"
-              :class="sectorCards[0].revealed.value ? 'revealed' : ''" :ref="sectorCards[0].revealRef" style="transition-delay:0ms">
-              <div class="relative h-48 overflow-hidden bg-slate-100">
-                <img src="/images/agro_processing.jpg" alt="Agro-processing in Arua SEZ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+
+            <!-- Photo slider -->
+            <div
+              class="lg:col-span-6 relative rounded-3xl overflow-hidden shadow-xl bg-slate-900 min-h-[320px] sm:min-h-[420px] lg:min-h-[520px] reveal-up"
+              :class="sectorCards[0].revealed.value ? 'revealed' : ''" :ref="sectorCards[0].revealRef"
+              @mouseenter="stopCoreAutoPlay" @mouseleave="startCoreAutoPlay"
+            >
+              <img
+                v-for="(img, i) in coreImages"
+                :key="img"
+                :src="img"
+                :alt="'Arua SEZ site photo ' + (i + 1)"
+                class="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out"
+                :class="coreSlide === i ? 'opacity-100' : 'opacity-0'"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/10 pointer-events-none"></div>
+
+              <div class="absolute top-4 left-4 px-3 py-1 rounded-md bg-[#D00004] text-white text-[11px] font-bold uppercase tracking-wider">
+                Arua Special Economic Zone
               </div>
-              <div class="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900 mb-2">Agriculture &amp; Agro-Processing</h3>
-                  <p class="text-xs text-slate-600 leading-relaxed mb-4">Industrial cleaning, sorting, packing, and refining of groundnuts, rice, palm oil, coffee, cassava, oilseeds, and shea butter.</p>
-                </div>
-                <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-[11px] font-bold text-[#D17F00] uppercase tracking-wider">High Volume Export</span>
-                  <RouterLink to="/sectors" class="text-xs font-bold text-slate-900 hover:text-[#D00004]">Details &#8594;</RouterLink>
-                </div>
+
+              <!-- Controls -->
+              <button type="button" id="core-slider-prev" aria-label="Previous photo" @click="prevCoreSlide"
+                class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur text-white flex items-center justify-center transition-colors">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <button type="button" id="core-slider-next" aria-label="Next photo" @click="nextCoreSlide"
+                class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur text-white flex items-center justify-center transition-colors">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+              <div class="absolute bottom-4 left-0 right-0 flex items-center justify-center gap-2">
+                <button
+                  v-for="(img, i) in coreImages"
+                  :key="'dot-' + img"
+                  type="button"
+                  :id="'core-slider-dot-' + i"
+                  :aria-label="'Go to photo ' + (i + 1)"
+                  @click="goToCoreSlide(i)"
+                  class="h-2 rounded-full transition-all duration-300"
+                  :class="coreSlide === i ? 'w-8 bg-white' : 'w-2 bg-white/50 hover:bg-white/80'"
+                ></button>
               </div>
             </div>
 
-            <div class="group bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-xl hover:border-amber-400 transition-all duration-300 reveal-up"
-              :class="sectorCards[1].revealed.value ? 'revealed' : ''" :ref="sectorCards[1].revealRef" style="transition-delay:120ms">
-              <div class="relative h-48 overflow-hidden bg-slate-900">
-                <img src="/images/gold_mining.jpg" alt="Gold mining operation" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"/>
-              </div>
-              <div class="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900 mb-2">Mining &amp; Mineral Processing</h3>
-                  <p class="text-xs text-slate-600 leading-relaxed mb-4">Gold refining and mineral smelting, directly leveraging artisanal mining from Eastern Congo and newly identified mineral prospects in West Nile.</p>
-                </div>
-                <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-[11px] font-bold text-[#F59E0B] uppercase tracking-wider">High Capital Value</span>
-                  <RouterLink to="/sectors" class="text-xs font-bold text-slate-900 hover:text-[#D00004]">Details &#8594;</RouterLink>
-                </div>
-              </div>
-            </div>
+            <!-- Text only: core activities -->
+            <div class="lg:col-span-6 flex flex-col gap-4">
 
-            <div class="group bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-xl hover:border-slate-800 transition-all duration-300 reveal-up"
-              :class="sectorCards[2].revealed.value ? 'revealed' : ''" :ref="sectorCards[2].revealRef" style="transition-delay:240ms">
-              <div class="relative h-48 overflow-hidden bg-slate-100">
-                <img src="/images/ethanol_manufacturing.jpg" alt="Ethanol and manufacturing plant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-              </div>
-              <div class="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900 mb-2">Manufacturing &amp; Ethanol</h3>
-                  <p class="text-xs text-slate-600 leading-relaxed mb-4">Ethanol and industrial alcohol from cassava and sugarcane; confectionery; aromatic soaps; plus steel lines, timber, and bonded transit yards.</p>
+              <div class="group flex gap-4 p-5 rounded-2xl border border-gray-200 bg-white hover:shadow-xl hover:border-amber-400 transition-all duration-300 reveal-up"
+                :class="sectorCards[1].revealed.value ? 'revealed' : ''" :ref="sectorCards[1].revealRef" style="transition-delay:120ms">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-amber-50 to-lime-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 20h10"/>
+                    <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
+                    <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
+                    <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
+                  </svg>
                 </div>
-                <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
-                  <span class="text-[11px] font-bold text-slate-800 uppercase tracking-wider">Fast Moving Goods</span>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between gap-3 mb-1">
+                    <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900">Agriculture &amp; Agro-Processing</h3>
+                    <span class="hidden sm:inline text-[11px] font-bold text-[#D17F00] uppercase tracking-wider whitespace-nowrap">High Volume Export</span>
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed mb-2">Industrial cleaning, sorting, packing, and refining of groundnuts, rice, palm oil, coffee, cassava, oilseeds, and shea butter.</p>
                   <RouterLink to="/sectors" class="text-xs font-bold text-slate-900 hover:text-[#D00004]">Details &#8594;</RouterLink>
                 </div>
               </div>
+
+              <div class="group flex gap-4 p-5 rounded-2xl border border-gray-200 bg-white hover:shadow-xl hover:border-amber-400 transition-all duration-300 reveal-up"
+                :class="sectorCards[2].revealed.value ? 'revealed' : ''" :ref="sectorCards[2].revealRef" style="transition-delay:240ms">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 3h12l4 6-10 13L2 9Z"/>
+                    <path d="M11 3 8 9l4 13 4-13-3-6"/>
+                    <path d="M2 9h20"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between gap-3 mb-1">
+                    <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900">Mining &amp; Mineral Processing</h3>
+                    <span class="hidden sm:inline text-[11px] font-bold text-[#F59E0B] uppercase tracking-wider whitespace-nowrap">High Capital Value</span>
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed mb-2">Gold refining and mineral smelting, directly leveraging artisanal mining from Eastern Congo and newly identified mineral prospects in West Nile.</p>
+                  <RouterLink to="/sectors" class="text-xs font-bold text-slate-900 hover:text-[#D00004]">Details &#8594;</RouterLink>
+                </div>
+              </div>
+
+              <div class="group flex gap-4 p-5 rounded-2xl border border-gray-200 bg-white hover:shadow-xl hover:border-slate-800 transition-all duration-300 reveal-up"
+                :class="sectorCards[2].revealed.value ? 'revealed' : ''" style="transition-delay:360ms">
+                <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-slate-100 to-red-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-[#D00004]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/>
+                    <path d="M17 18h1"/>
+                    <path d="M12 18h1"/>
+                    <path d="M7 18h1"/>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between gap-3 mb-1">
+                    <h3 class="font-heading font-black text-sm uppercase tracking-wider text-slate-900">Manufacturing &amp; Ethanol</h3>
+                    <span class="hidden sm:inline text-[11px] font-bold text-slate-800 uppercase tracking-wider whitespace-nowrap">Fast Moving Goods</span>
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed mb-2">Ethanol and industrial alcohol from cassava and sugarcane; confectionery; aromatic soaps; plus steel lines, timber, and bonded transit yards.</p>
+                  <RouterLink to="/sectors" class="text-xs font-bold text-slate-900 hover:text-[#D00004]">Details &#8594;</RouterLink>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -706,18 +763,18 @@ const slides = [
     subheadline: 'Committed to Growth',
     subtitle: 'A dedicated team driving regional development and success.'
   },
-  {
-    image: '/images/trade.png',
-    headline: 'Cross-Border Trade',
-    subheadline: 'Access New Markets',
-    subtitle: 'Lower your logistics costs significantly with direct access to DRC and South Sudan.'
-  },
-  {
-    image: '/images/agric.png',
-    headline: 'Agro-Industrial Hub',
-    subheadline: 'Regional Processing',
-    subtitle: 'Guaranteed raw material supply for seamless operations.'
-  }
+  // {
+  //   image: '/images/trade.png',
+  //   headline: 'Cross-Border Trade',
+  //   subheadline: 'Access New Markets',
+  //   subtitle: 'Lower your logistics costs significantly with direct access to DRC and South Sudan.'
+  // },
+  // {
+  //   image: '/images/agric.png',
+  //   headline: 'Agro-Industrial Hub',
+  //   subheadline: 'Regional Processing',
+  //   subtitle: 'Guaranteed raw material supply for seamless operations.'
+  // }
 ]
 
 let timer = null
@@ -727,6 +784,22 @@ function prevSlide()  { currentSlide.value = (currentSlide.value - 1 + slides.le
 function goToSlide(index) { currentSlide.value = index }
 function startAutoPlay() { stopAutoPlay(); timer = setInterval(nextSlide, 5500) }
 function stopAutoPlay()  { if (timer) { clearInterval(timer); timer = null } }
+
+// Core Activities photo slider
+const coreSlide = ref(0)
+const coreImages = [
+  '/images/aruasez (39).jpeg',
+  '/images/aruasez (8).jpeg',
+  '/images/aruasez (36).jpeg',
+  '/images/aruasez (37).jpeg'
+]
+let coreTimer = null
+
+function nextCoreSlide() { coreSlide.value = (coreSlide.value + 1) % coreImages.length }
+function prevCoreSlide() { coreSlide.value = (coreSlide.value - 1 + coreImages.length) % coreImages.length }
+function goToCoreSlide(index) { coreSlide.value = index }
+function startCoreAutoPlay() { stopCoreAutoPlay(); coreTimer = setInterval(nextCoreSlide, 4500) }
+function stopCoreAutoPlay()  { if (coreTimer) { clearInterval(coreTimer); coreTimer = null } }
 
 // Testimonials
 const activeTestimonial = ref(0)
@@ -758,6 +831,7 @@ let testimonialTimer = null
 
 onMounted(() => {
   startAutoPlay()
+  startCoreAutoPlay()
   testimonialTimer = setInterval(() => {
     activeTestimonial.value = (activeTestimonial.value + 1) % testimonials.length
   }, 6000)
@@ -765,6 +839,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   stopAutoPlay()
+  stopCoreAutoPlay()
   if (testimonialTimer) clearInterval(testimonialTimer)
 })
 </script>

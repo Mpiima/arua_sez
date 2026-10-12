@@ -32,8 +32,18 @@
 
             <!-- Sector 1: Agro-Processing -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#F8FAFC] rounded-3xl p-8 sm:p-12 border border-slate-200">
-              <div class="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg">
-                <img src="/images/agro.jpg" alt="Agro-Processing" class="w-full h-full object-cover"/>
+              <!-- TODO: replace with real agro-processing photo when available -->
+              <div class="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 via-amber-100 to-lime-100 flex items-center justify-center" role="img" aria-label="Agriculture and agro-processing icon">
+                <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-amber-200/50"></div>
+                <div class="absolute -left-8 -bottom-12 w-52 h-52 rounded-full bg-lime-200/50"></div>
+                <div class="relative w-32 h-32 rounded-3xl bg-white/80 shadow-md flex items-center justify-center">
+                  <svg class="w-20 h-20 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 20h10"/>
+                    <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
+                    <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
+                    <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
+                  </svg>
+                </div>
                 <div class="absolute top-4 left-4 px-3 py-1 rounded-md bg-[#D17F00] text-white text-xs font-bold uppercase tracking-wider">
                   Agro-Industrial
                 </div>
@@ -103,8 +113,18 @@
 
             <!-- Sector 3: Manufacturing & Ethanol -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#F8FAFC] rounded-3xl p-8 sm:p-12 border border-slate-200">
-              <div class="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg">
-                <img src="/images/manufacturing.jpg" alt="Manufacturing" class="w-full h-full object-cover"/>
+              <!-- TODO: replace with real manufacturing photo when available -->
+              <div class="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-slate-100 via-slate-200 to-red-100 flex items-center justify-center" role="img" aria-label="Manufacturing and ethanol icon">
+                <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-red-200/50"></div>
+                <div class="absolute -left-8 -bottom-12 w-52 h-52 rounded-full bg-slate-300/50"></div>
+                <div class="relative w-32 h-32 rounded-3xl bg-white/80 shadow-md flex items-center justify-center">
+                  <svg class="w-20 h-20 text-[#D00004]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/>
+                    <path d="M17 18h1"/>
+                    <path d="M12 18h1"/>
+                    <path d="M7 18h1"/>
+                  </svg>
+                </div>
                 <div class="absolute top-4 left-4 px-3 py-1 rounded-md bg-[#0B0F19] text-white text-xs font-bold uppercase tracking-wider">
                   Industrial
                 </div>
@@ -178,8 +198,18 @@
 
             <!-- Sector 5: Logistics & Warehousing -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#F8FAFC] rounded-3xl p-8 sm:p-12 border border-slate-200">
-              <div class="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg">
-                <img src="/images/warehousing.jpg" alt="Warehousing and Logistics" class="w-full h-full object-cover"/>
+              <!-- TODO: replace with real warehousing photo when available -->
+              <div class="lg:col-span-5 relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br from-amber-50 via-slate-100 to-slate-200 flex items-center justify-center" role="img" aria-label="Warehousing and logistics icon">
+                <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-amber-200/50"></div>
+                <div class="absolute -left-8 -bottom-12 w-52 h-52 rounded-full bg-slate-300/50"></div>
+                <div class="relative w-32 h-32 rounded-3xl bg-white/80 shadow-md flex items-center justify-center">
+                  <svg class="w-20 h-20 text-[#D17F00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/>
+                    <path d="M6 18h12"/>
+                    <path d="M6 14h12"/>
+                    <rect width="12" height="12" x="6" y="10"/>
+                  </svg>
+                </div>
                 <div class="absolute top-4 left-4 px-3 py-1 rounded-md bg-[#D17F00] text-white text-xs font-bold uppercase tracking-wider">
                   Logistics
                 </div>

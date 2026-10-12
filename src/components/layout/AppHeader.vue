@@ -89,9 +89,9 @@
                   <div class="dropdown-label">About Arua SEZ</div>
                 </RouterLink>
                 <!-- Enterprise Model -->
-                <RouterLink to="/model" @click="closeAll" class="dropdown-item group" :class="$route.path === '/model' ? 'bg-red-50' : ''">
+                <!-- <RouterLink to="/model" @click="closeAll" class="dropdown-item group" :class="$route.path === '/model' ? 'bg-red-50' : ''">
                   <div class="dropdown-label">Enterprise Model</div>
-                </RouterLink>
+                </RouterLink> -->
                 <!-- Governance divider -->
                 <div class="mx-3 my-1.5 border-t border-gray-100"></div>
                 <div class="px-3 mb-1 text-[10px] font-extrabold tracking-widest text-gray-400 uppercase">Governance</div>

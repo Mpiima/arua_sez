@@ -35,7 +35,7 @@
             <li><RouterLink to="/contact" class="hover:text-[#F59E0B] transition-colors">Submit Investment Inquiry</RouterLink></li>
             <li><RouterLink to="/incentives" class="hover:text-[#F59E0B] transition-colors">UIA Framework &amp; Tax Holidays</RouterLink></li>
             <li><RouterLink to="/sectors" class="hover:text-[#F59E0B] transition-colors">Core Processing Activities</RouterLink></li>
-            <li><RouterLink to="/admin" class="hover:text-[#F59E0B] transition-colors">Admin &amp; Investor Portal</RouterLink></li>
+            <!-- <li><RouterLink to="/admin" class="hover:text-[#F59E0B] transition-colors">Admin &amp; Investor Portal</RouterLink></li> -->
           </ul>
         </div>
 
